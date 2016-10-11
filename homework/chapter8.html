@@ -1,0 +1,82 @@
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Horse-drawn Chariots</title>
+</head>
+<body>
+<div class="container">
+    <h1>Chariot shopping</h1>
+    <ul class="list-group">
+        <chariot v-for="chariot in chariots" :chariot="chariot" :current="current" @select="updateChariot"></chariot>
+    </ul>
+    <pre>{{ $data }}</pre>
+</div>
+<!-- component template -->
+<template id="chariot-template">
+    <li class="list-group-item">
+        <h4>"{{ chariot.name }}" chariot has <strong>{{ chariot.horses }}</strong> horse(s)!</h4>
+        <button @click="rideChariot(chariot)" class="btn btn-primary" :disabled="isCurrent">
+            {{ action }}
+        </button>
+    </li>
+</template>
+<!-- end component template -->
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('chariot', {
+        props: ['chariot', 'current'],
+        template: "#chariot-template",
+        methods: {
+            rideChariot: function (chariot) {
+                this.$emit('select', chariot)
+            },
+        },
+        computed: {
+            //is true when the chariot has more horses than the current one
+            hasMoreHorses: function () {
+                return this.current.horses < this.chariot.horses
+            },
+            //is true when the chariot is the current one
+            isCurrent: function () {
+                return this.current.name == this.chariot.name
+            },
+            //is true when there is no chariot current
+            noChariot: function () {
+                return this.current.name == null;
+            },
+            //define the action for each chariot
+            action: function () {
+                if (this.noChariot) {
+                    action = 'Pick Chariot'
+                } else if (this.isCurrent) {
+                    action = 'Riding!'
+                } else if (this.hasMoreHorses) {
+                    action = 'Hire Horses'
+                } else {
+                    action = 'Dismiss Horses'
+                }
+                return action;
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '.container',
+        data: {
+            chariots: [
+                {name: "Olympus", horses: 4},
+                {name: "Sagitta", horses: 3},
+                {name: "Icarus", horses: 2},
+                {name: "Abraxas", horses: 1},
+            ],
+            //the current 'chariot'
+            current: {}
+        },
+        methods: {
+          updateChariot: function (chariot) {
+            this.current = chariot
+          }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Greetings user</title>
+</head>
+<body>
+<div class="container">
+    <!-- the || is the logical operator OR -->
+    <div v-if="gender== 'male' || gender == 'female'">
+        <h1>Hello,
+            <!-- render span if 'gender' equals to 'male' -->
+            <span v-show="gender == 'male'">Mister {{name}}.</span>
+            <!-- render span if 'gender' equals to 'female' -->
+            <span v-if="gender == 'female'">Miss {{name}}.</span>
+        </h1>
+    </div>
+    <!-- v-else immediately follows v-if block to work -->
+    <h1 v-else>So you can't decide. Fine!</h1>
+    <!-- show inputs -->
+    <label for="gender">Enter your gender:</label>
+    <input v-model="gender" class="form-control" id="gender"></input>
+    <label for="name">Enter your name:</label>
+    <input v-model="name" class="form-control" id="name"></input>
+    <pre>{{ $data }}</pre>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '.container',
+        data: {
+            gender: "female",
+            name: "Universe",
+        },
+    })
+</script>
+</html>

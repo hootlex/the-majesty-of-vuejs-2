@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Paint Me</title>
+</head>
+<body>
+      <div class="container" :style="bgColor">
+        <div class="centered">
+          <h1>Paint this background!</h1>
+          <input type="color" v-model="bgColor.backgroundColor" />
+        </div>
+      </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+      el: '.container',
+      data: {
+        bgColor: {
+          backgroundColor: "#00cc00"
+        }
+      }
+    });
+</script>
+<style type="text/css">
+    .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+    .container {
+      width: 100%;
+      height: 100%
+    }
+</style>
+</html>
