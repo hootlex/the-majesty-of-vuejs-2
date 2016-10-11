@@ -1,0 +1,34 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Stories</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Let's hear some stories!</h1>
+        <div>
+            <ul class="list-group">
+                <li v-for="story in stories" class="list-group-item">
+                    Someone said "{{ story }}"
+                </li>
+            </ul>
+        </div>
+        <pre>
+            {{$data}}
+        </pre>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '.container',
+        data: {
+            stories: [
+                "I crashed my car today!",
+                "Yesterday, someone stole my bag!",
+                "Someone ate my chocolate...",
+            ]
+        }
+    })
+</script>
+</html>

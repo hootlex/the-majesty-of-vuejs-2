@@ -1,0 +1,36 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>The Gotham Gazette</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Real identities of Super Heroes!</h1>
+    <ul class="list-group">
+        <li v-for="hero in heroes"
+        class="list-group-item"
+        >
+            {{hero | snitch}}
+        </li>
+    </ul>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+Vue.filter('snitch', function (heroes) {
+  return heroes.isObvioulsy + ' is ' + heroes.firstname + ' ' + heroes.lastname + ' in real life!'
+})
+
+new Vue({
+    el: '.container',
+    data: {
+       heroes:  [
+          { firstname: 'Bruce', lastname:  'Wayne', isObvioulsy: 'Batman'},
+          { firstname: 'Clark', lastname: 'Kent', isObvioulsy: 'Superman'},
+          { firstname: 'Jay', lastname: 'Garrick', isObvioulsy: 'Flash'},
+          { firstname: 'Peter', lastname: 'Parker', isObvioulsy: 'Spider-Man'}
+      ]
+    }
+})
+</script>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Emit and Listen</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container text-center">
+    <p style="font-size: 140px;">
+      {{ votes }}
+    </p>
+    <food @voted="vote" name="Cheeseburger"></food>
+  </div>
+  <template id="food">
+    <button class="btn btn-default" @click="vote">{{ name }}</button>
+  </template>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+Vue.component('food', {
+  template: '#food',
+  props: ['name'],
+  methods: {
+    vote: function () {
+      this.$emit('voted')
+    }
+  },
+})
+
+new Vue({
+  el: '.container',
+  data: {
+    votes: 0
+  },
+  methods:
+  {
+    vote: function () {
+      this.votes++
+    },
+  },
+})
+</script>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<title>Hello Vue</title>
+</head>
+<body class="container-fluid">
+  <div id="app">
+    <ul>
+        <li :class="{'completed' : task.done}"
+        :style="styleObject"
+        v-for="task in tasks">
+            {{task.body}}
+        <button @click="completeTask(task)" class="btn">
+            Just do it!
+        </button>
+        </li>
+    </ul>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+new Vue({
+    el: '#app',
+    data: {
+        tasks: [
+                {body: "Feed the horses", done: true},
+                {body: "Wash armor", done: true},
+                {body: "Sharp sword", done: false},
+            ],
+        styleObject: {
+             fontSize: '25px'
+            }
+    },
+    methods: {
+        completeTask: function(task) {
+            task.done = !task.done;
+        }
+    },
+});
+</script>
+<style type="text/css">
+    .completed {
+        text-decoration: line-through;
+    }
+</style>
+</html>

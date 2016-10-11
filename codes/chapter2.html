@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Hello Vue</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <input v-model="message">
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+
+</script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Greetings your Majesty!'
+  }
+})
+</script>
+</html>

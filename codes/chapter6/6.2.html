@@ -1,0 +1,62 @@
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Famous Stories</title>
+</head>
+<body>
+  <div class="container">
+      <h1>Let's hear some stories!</h1>
+      <ul class="list-group">
+          <li v-for="story in orderedStories"
+              class="list-group-item"
+          >
+              {{ story.writer }} said "{{ story.plot }}"
+              and upvoted {{ story.upvotes }} times.
+          </li>
+      </ul>
+      <button @click="order = order * -1">Reverse Order</button>
+  <pre>
+      {{$data}}
+  </pre>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+new Vue({
+    el: '.container',
+    data: {
+      stories: [
+          {
+              plot: "I crashed my car today!",
+              writer: "Alex",
+              upvotes: 28
+          },
+          {
+              plot: "Yesterday, someone stole my bag!",
+              writer: "John",
+              upvotes: 8
+          },
+          {
+              plot: "Someone ate my chocolate...",
+              writer: "John",
+              upvotes: 51
+          },
+          {
+              plot: "I ate someone's chocolate!",
+              writer: "Alex",
+              upvotes: 74
+          },
+      ],
+        order : 1
+    },
+    computed: {
+      orderedStories: function () {
+        var order = this.order;
+        return this.stories.sort(function(a, b) {
+          return (a.upvotes - b.upvotes) * order;
+        })
+      }
+    }
+})
+</script>
+</html>

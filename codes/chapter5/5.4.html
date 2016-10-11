@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Calculator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Type 2 numbers and choose operation.</h1>
+    <form class="form-inline">
+      <!-- Notice here the special attribute 'number'
+      is passed in order to parse inputs as numbers.-->
+      <input v-model.number="a"  class="form-control">
+      <select v-model="operator" class="form-control">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+      </select>
+      <!-- Notice here the special attribute 'number'
+      is passed in order to parse inputs as numbers.-->
+      <input v-model.number="b" class="form-control">
+  </form>
+  <h2>Result: {{a}}  {{operator}}  {{b}} = {{c}}</h2>
+  <pre>
+    {{$data}}
+  </pre>
+</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+new Vue({
+  el: '.container',
+  data: {
+    a: 1,
+    b: 2,
+    operator: "+",
+  },
+  computed: {
+    c: function () {
+      switch (this.operator) {
+        case "+":
+        return this.a + this.b
+        break;
+        case "-":
+        return this.a - this.b
+        break;
+        case "*":
+        return this.a * this.b
+        break;
+        case "/":
+        return this.a / this.b
+        break;
+      }
+    }
+  },
+});
+</script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Hello Vue</title>
+</head>
+<body class="text-center">
+  <div id="app">
+    <div :style="[niceStyle, badStyle]">Such nice styles my Lord!</div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+new Vue({
+  el: '#app',
+  data: {
+      niceStyle:
+      {
+          color: 'blue',
+          fontSize: '20px'
+      },
+      badStyle:
+      {
+          fontStyle: 'italic'
+      }
+  }
+});
+</script>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Awesome Stories</title>
+</head>
+<body>
+  <div class="container">
+      <h1>Lets hear some stories!</h1>
+      <div>
+          <h3>Alex's stories</h3>
+          <ul class="list-group">
+              <story v-for="story in storiesBy('Alex')"
+              :story="story"></story>
+          </ul>
+          <h3>John's stories</h3>
+          <ul class="list-group">
+              <story v-for="story in storiesBy('John')"
+              :story="story"></story>
+          </ul>
+          <div class="form-group">
+              <label for="query">What are you looking for?</label>
+              <input v-model="query" class="form-control">
+          </div>
+          <h3>Search results:</h3>
+          <ul class="list-group">
+              <story v-for="story in search"
+              :story="story"></story>
+          </ul>
+      </div>
+  </div>
+  <template id="story-template">
+    <li class="list-group-item">
+      {{ story.writer }} said "{{ story.body }}"
+    </li>
+  </template>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+Vue.component('story', {
+    props: ['story'],
+    template: '#story-template'
+});
+
+new Vue({
+  el: '.container',
+  data: {
+    stories: [
+      {
+        body: "I crashed my car today!",
+        writer: "Alex"
+      },
+      {
+        body: "Yesterday, someone stole my bag!",
+        writer: "John"
+      },
+      {
+        body: "Someone ate my chocolate...",
+        writer: "John"
+      },
+      {
+        body: "I ate someone's chocolate!",
+        writer: "Alex"
+      },
+    ],
+    query: ' '
+  },
+  methods:{
+    storiesBy: function (writer) {
+      return this.stories.filter(function (story) {
+        return story.writer === writer
+      })
+    }
+  },
+  computed: {
+    search: function () {
+      var query = this.query
+      return this.stories.filter(function (story) {
+        return story.body.includes(query)
+      })
+    }
+  }
+})
+</script>
+</html>

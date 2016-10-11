@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Calculator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Let's hear some famous stories! ({{famous.length}})</h1>
+    <ul class="list-group">
+      <li v-for="story in famous"
+      class="list-group-item"
+      >
+      {{ story.writer }} said "{{ story.plot }}"
+      and upvoted {{ story.upvotes }} times.
+    </li>
+  </ul>
+</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript">
+new Vue({
+  el: '.container',
+  data: {
+    stories: [
+      {
+        plot: "I crashed my car today!",
+        writer: "Alex",
+        upvotes: 28
+      },
+      {
+        plot: "Yesterday, someone stole my bag!",
+        writer: "John",
+        upvotes: 8
+      },
+      {
+        plot: "Someone ate my chocolate...",
+        writer: "John",
+        upvotes: 51
+      },
+      {
+        plot: "I ate someone's chocolate!",
+        writer: "Alex",
+        upvotes: 74
+      },
+    ]
+  },
+  computed: {
+    famous: function() {
+      return this.stories.filter(function(item){
+        return item.upvotes > 25;
+      });
+    }
+  }
+})
+</script>
+</html>
