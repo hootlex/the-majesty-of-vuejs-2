@@ -54,7 +54,6 @@ new Vue({
             this.stories.push(newStory);
         },
         fetchStories: function () {
-            console.log('fetsi')
             var vm = this;
             this.$http.get('/api/stories')
                 .then(function (response) {
