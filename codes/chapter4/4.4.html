@@ -7,10 +7,10 @@
   <div class="container">
       <h1>Let's hear some stories!</h1>
       <ul class="list-group">
-          <li v-for="(index, value, key) in story"
+          <li v-for="(value, key, index) in story"
                class="list-group-item"
                >
-              {{key}} : {{value}} : {{index}}
+              {{index}} : {{key}} : {{value}}
           </li>
       </ul>
   </div>
