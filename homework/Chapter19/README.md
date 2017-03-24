@@ -1,6 +1,6 @@
-# router-new
+#Pokedex Project
 
-> A Vue.js project
+> A Majesty of Vue.js 2 project
 
 ## Build Setup
 
