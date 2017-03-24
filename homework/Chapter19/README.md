@@ -1,4 +1,4 @@
-#Pokedex Project
+# Pokedex Project
 
 > A Majesty of Vue.js 2 project
 
