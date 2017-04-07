@@ -1,5 +1,6 @@
-# 3
+# Codes for Chapter 17
 
+These code example are based on the `webpack-simple` template.
 > A Vue.js project
 
 ## Build Setup
