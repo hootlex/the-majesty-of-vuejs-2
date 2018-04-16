@@ -1,4 +1,5 @@
-#!/bin/bash;
+#!/usr/bin/env bash
+
 echo "Begin Setup";
 
 echo "Install project dependencies...";
