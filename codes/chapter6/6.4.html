@@ -7,15 +7,13 @@
     <div class="container">
     <h1>Real identities of Super Heroes!</h1>
     <ul class="list-group">
-        <li v-for="hero in heroes"
-        class="list-group-item"
-        >
+        <li v-for="(hero, index) in heroes" :key="index" class="list-group-item">
             {{hero | snitch}}
         </li>
     </ul>
     </div>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.filter('snitch', function (heroes) {
   return heroes.isObvioulsy + ' is ' + heroes.firstname + ' ' + heroes.lastname + ' in real life!'

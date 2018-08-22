@@ -7,16 +7,14 @@
   <div class="container">
     <h1>Let's hear some famous stories! ({{famous.length}})</h1>
     <ul class="list-group">
-      <li v-for="story in famous"
-      class="list-group-item"
-      >
-      {{ story.writer }} said "{{ story.plot }}"
-      and upvoted {{ story.upvotes }} times.
+      <li v-for="(story, index) in famous" :key="index" class="list-group-item">
+        {{ story.writer }} said "{{ story.plot }}"
+        and upvoted {{ story.upvotes }} times.
     </li>
   </ul>
 </div>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
   el: '.container',
@@ -45,8 +43,8 @@ new Vue({
     ]
   },
   computed: {
-    famous: function() {
-      return this.stories.filter(function(item){
+    famous: function () {
+      return this.stories.filter(function (item) {
         return item.upvotes > 25;
       });
     }

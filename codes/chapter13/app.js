@@ -67,7 +67,7 @@ new Vue({
                     this.stories = storiesReady
                 });
         },
-        makePagination(data){
+        makePagination(data) {
             //here we use response.data
             var pagination = {
                 current_page: data.current_page,

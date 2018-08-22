@@ -9,16 +9,16 @@
     <button class="btn">Sign up</button>
     <famous></famous>
   </div>
-  </template>
+</template>
 
-  <script>
-  import Famous from './Famous.vue'
-  export default {
-    components: {
-      Famous
-    },
-    created () {
-      console.log('register')
-    }
+<script>
+import Famous from './Famous.vue'
+export default {
+  components: {
+    Famous
+  },
+  created () {
+    console.log('register')
   }
-  </script>
+}
+</script>

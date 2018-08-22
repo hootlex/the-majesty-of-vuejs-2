@@ -6,7 +6,7 @@
     <router-link :to="{name: 'login'}">Login</router-link>
     <router-link :to="{ name: 'stories.all'}">Stories</router-link>
     <transition enter-active-class="animated rollIn" leave-active-class="animated rollOut">
-    <router-view></router-view>
+      <router-view></router-view>
     </transition>
   </div>
 </template>

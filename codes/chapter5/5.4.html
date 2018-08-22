@@ -26,7 +26,7 @@
   </pre>
 </div>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
   el: '.container',
@@ -38,18 +38,14 @@ new Vue({
   computed: {
     c: function () {
       switch (this.operator) {
-        case "+":
-        return this.a + this.b
-        break;
-        case "-":
-        return this.a - this.b
-        break;
-        case "*":
-        return this.a * this.b
-        break;
-        case "/":
-        return this.a / this.b
-        break;
+        case '+':
+          return this.a + this.b
+        case '-':
+          return this.a - this.b
+        case '*':
+          return this.a * this.b
+        case '/':
+          return this.a / this.b
       }
     }
   },

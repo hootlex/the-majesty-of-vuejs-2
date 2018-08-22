@@ -9,17 +9,17 @@
     <button class="btn">Sign up</button>
     <famous :stories="stories"></famous>
   </div>
-  </template>
+</template>
 
-  <script>
-  import Famous from './Famous.vue'
-  export default {
-    props: ['stories'],
-    components: {
-      Famous
-    },
-    created () {
-      console.log('register')
-    }
+<script>
+import Famous from './Famous.vue'
+export default {
+  props: ['stories'],
+  components: {
+    Famous
+  },
+  created () {
+    console.log('register')
   }
-  </script>
+}
+</script>

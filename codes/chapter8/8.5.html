@@ -8,11 +8,12 @@
     <div class="container">
       <h1>Let's hear some stories!</h1>
       <ul class="list-group">
-        <story v-for="story in stories"
-        :story="story"
-        :favorite="favorite"
-        @update="updateFavorite">
-      </story>
+        <story v-for="(story, index) in stories"
+          :key="index"
+          :story="story"
+          :favorite="favorite"
+          @update="updateFavorite">
+        </story>
     </ul>
     <pre>
       {{ $data }}
@@ -20,21 +21,17 @@
   </div>
 </div>
 <template id="story-template">
-  <li  class="list-group-item">
+  <li class="list-group-item">
     {{ story.writer }} said "{{ story.plot }}".
     Story upvotes {{ story.upvotes }}.
-    <button v-show="!story.voted" @click="upvote"
-    class="btn btn-default">
-    Upvote
+    <button v-show="!story.voted" @click="upvote" class="btn btn-default">
+      Upvote
+    </button>
+    <button v-show="!isFavorite" @click="markAsFavorite" class="btn btn-primary">
+      Favorite
   </button>
-  <button v-show="!isFavorite" @click="markAsFavorite"
-  class="btn btn-primary">
-  Favorite
-</button>
-<span v-show="isFavorite"
-class="glyphicon glyphicon-star pull-right" aria-hidden="true">
-</span>
-</li>
+  <span v-show="isFavorite" class="glyphicon glyphicon-star pull-right" aria-hidden="true"></span>
+  </li>
 </template>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.8/vue.js"></script>
@@ -43,19 +40,19 @@ Vue.component('story', {
   template: "#story-template",
   props: ['story', 'favorite'],
   methods:{
-    upvote: function(){
+    upvote: function () {
       this.story.upvotes += 1;
       this.story.voted = true;
     },
-    markAsFavorite: function(){
+    markAsFavorite: function () {
       // 'update' is just the name of the custom event
       // it could be anything. ex: fav-update
       this.$emit('update', this.story)
     },
   },
   computed:{
-    isFavorite: function(){
-      return this.story == this.favorite;
+    isFavorite: function () {
+      return this.story === this.favorite;
     },
   }
 });
@@ -92,7 +89,7 @@ new Vue({
     favorite: {}
   },
   methods:{
-      updateFavorite: function(story){
+      updateFavorite: function (story) {
         this.favorite = story;
       },
     },

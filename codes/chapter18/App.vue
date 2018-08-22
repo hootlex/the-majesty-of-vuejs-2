@@ -4,7 +4,7 @@
     <h1>Welcome to dynamic Components!</h1>
     <ul class="nav nav-tabs">
     <!-- set 'active' class conditionally -->
-      <li v-for="page in pages" :class="isActivePage(page) ? 'active' : ''">
+      <li v-for="(page, index) in pages" :key="index" :class="isActivePage(page) ? 'active' : ''">
       <!-- use links to change between tabs -->
         <a @click="setPage(page)">{{page | capitalize}}</a>
       </li>

@@ -7,18 +7,16 @@
     <div class="container">
         <story v-bind:story="{plot: 'My horse is amazing.', writer: 'Mr. Weebl'}">
         </story>
-        <story v-bind:story="{plot: 'Narwhals invented Shish Kebab.', writer: 'Mr. Weebl'}"
-        >
+        <story v-bind:story="{plot: 'Narwhals invented Shish Kebab.', writer: 'Mr. Weebl'}">
         </story>
-        <story v-bind:story="{plot: 'The dark side of the Force is stronger.', writer: 'Darth Vader'}"
-        >
+        <story v-bind:story="{plot: 'The dark side of the Force is stronger.', writer: 'Darth Vader'}">
         </story>
     </div>
     <template id="story-template">
       <h1>{{ story.writer }} said "{{ story.plot }}"</h1>
     </template>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
     props: ['story'],

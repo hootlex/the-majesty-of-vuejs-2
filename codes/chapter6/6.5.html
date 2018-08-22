@@ -7,16 +7,14 @@
   <div class="container">
     <h1>Let's hear some stories!</h1>
     <ul class="list-group">
-      <li v-for="story in orderedStories"
-      class="list-group-item"
-      >
+      <li v-for="(story, index) in orderedStories" :key="index" class="list-group-item">
       {{ story.writer }} said "{{ story.plot }}"
       and upvoted {{ story.upvotes }} times.
     </li>
   </ul>
   <!-- Without using the computed property. -->
   <ul class="list-group">
-    <li v-for="story in _.orderBy(stories, ['upvotes'], [order])" class="list-group-item">
+    <li v-for="(story, index) in _.orderBy(stories, ['upvotes'], [order])" :key="index" class="list-group-item">
       {{ story.writer }} said "{{ story.plot }}"
       and upvoted {{ story.upvotes }} times.
     </li>
@@ -28,8 +26,8 @@
   </pre>
 </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
 <script type="text/javascript">
   new Vue({
     el: '.container',

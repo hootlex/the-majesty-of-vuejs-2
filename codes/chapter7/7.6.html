@@ -8,30 +8,28 @@
     <div class="container">
       <h1>Let's hear some stories!</h1>
       <ul class="list-group">
-        <story v-for="story in stories" :story="story"></story>
+        <story v-for="(story, index) in stories" :key="index" :story="story"></story>
       </ul>
       <pre>{{ $data }}</pre>
     </div>
   </div>
   <template id="story-template">
-      <li  class="list-group-item">
-          {{ story.writer }} said "{{ story.plot }}".
-          Story upvotes {{ story.upvotes }}.
-          <button v-show="!story.voted" @click="upvote"
-                      class="btn btn-default"
-          >
-              Upvote
-          </button>
-      </li>
+    <li class="list-group-item">
+      {{ story.writer }} said "{{ story.plot }}".
+      Story upvotes {{ story.upvotes }}.
+      <button v-show="!story.voted" @click="upvote" class="btn btn-default">
+        Upvote
+      </button>
+    </li>
   </template>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
     template: "#story-template",
     props: ['story'],
     methods:{
-        upvote: function(){
+        upvote: function () {
             this.story.upvotes += 1;
             this.story.voted = true;
         },

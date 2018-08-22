@@ -9,17 +9,13 @@
         <div>
             <h3>Alex's stories</h3>
             <ul class="list-group">
-                <li v-for="story in storiesBy('Alex')"
-                    class="list-group-item"
-                >
+                <li v-for="(story, index) in storiesBy('Alex')" :key="index" class="list-group-item">
                     {{ story.writer }} said "{{ story.plot }}"
                 </li>
             </ul>
             <h3>John's stories</h3>
             <ul class="list-group">
-                <li v-for="story in storiesBy('John')"
-                    class="list-group-item"
-                >
+                <li v-for="(story, index) in storiesBy('John')" :key="index" class="list-group-item">
                     {{ story.writer }} said "{{ story.plot }}"
                 </li>
             </ul>
@@ -29,7 +25,7 @@
         </pre>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
     el: '.container',
