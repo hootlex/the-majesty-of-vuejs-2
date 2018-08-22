@@ -7,21 +7,21 @@
 <div class="container">
     <h1>People of Vue</h1>
     <ul class="list-group">
-        <li v-for="candidate in candidates" class="list-group-item">
+        <li v-for="(candidate, index) in candidates" :key="index" class="list-group-item">
             {{candidate.name}} {{candidate.votes}}
             <!-- increase votes 'on:click'-->
             <button class="btn btn-default" @click="candidate.votes++">Vote</button>
         </li>
     </ul>
     <!-- listening for keyboard event -->
-    <input @keyup.delete="clear" class="form-control" placeholder="press 'delete' to reset "></input>
+    <input @keyup.delete="clear" class="form-control" placeholder="press 'delete' to reset">
     <!-- display the name of the 'mayor' using a computed property-->
     <h2>Our mayor is {{mayor.name}}!</h2>
     <pre>{{ $data }}</pre>
     <pre>{{ mayor }}</pre>
 </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
     var vm = new Vue({
         el: '.container',

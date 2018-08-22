@@ -20,7 +20,7 @@
                     <th>Director</th>
                     <th>Actions</th>
                 </tr>
-                <tr v-for="movie in movies" is="movie" :movie="movie"></tr>
+                <tr v-for="movie in movies" :key="movie.id" is="movie" :movie="movie"></tr>
             </table>
             <p class="lead">Here's a list of all your movies.
                 <button @click="createMovie()" class="btn btn-primary">Add a new one?</button>
@@ -35,7 +35,6 @@
         </td>
         <td class="col-md-6">
             <input v-if="movie.editing" v-model="movie.title" class="form-control">
-            </input>
             <!--in other occasions show the movie title-->
             <span v-else>
                 {{movie.title}}
@@ -43,7 +42,6 @@
         </td>
         <td>
             <input v-if="movie.editing" v-model="movie.director" class="form-control">
-            </input>
             <!--in other occasions show the movie director-->
             <span v-else>
                 {{movie.director}}
@@ -56,8 +54,7 @@
             </div>
             <div class="btn-group" v-else>
                 <!--If the movie is taken from the db then it will have an id-->
-                <button v-if="movie.id" class="btn btn-primary" @click="updateMovie(movie)">Update Movie
-                </button>
+                <button v-if="movie.id" class="btn btn-primary" @click="updateMovie(movie)">Update Movie</button>
                 <!--If the movie is new we want to store it-->
                 <button v-else class="btn btn-success" @click="storeMovie(movie)">Save New Movie</button>
                 <!--Always show cancel-->
@@ -66,8 +63,8 @@
         </td>
     </tr>
 </template>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.js"></script>
-<script src='/js/app.js'></script>
+<script src='js/app.js'></script>
 </body>
 </html>
