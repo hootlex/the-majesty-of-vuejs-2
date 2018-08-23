@@ -43,8 +43,8 @@ new Vue({
     methods: {
         createMovie: function () {
             var newMovie = {
-                title: "",
-                director: "",
+                title: '',
+                director: '',
                 editing: true
             };
             this.movies.push(newMovie);

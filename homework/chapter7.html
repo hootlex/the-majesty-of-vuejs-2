@@ -9,7 +9,7 @@
     <div class="container">
       <h1>Where would like to go?</h1>
       <ul class="list-group">
-        <planet v-for="planet in planets" :planet="planet"></planet>
+        <planet v-for="(planet, index) in planets" :key="index" :planet="planet"></planet>
     </ul>
   </div>
 </div>
@@ -25,13 +25,13 @@
 </li>
 </template>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('planet', {
-  template: "#planet-template",
+  template: '#planet-template',
   props: ['planet'],
   methods: {
-    visit: function(){
+    visit: function () {
       this.planet.visits++;
     },
   },
