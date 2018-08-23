@@ -2,7 +2,7 @@
   <div id="famous">
     <h3>Trending stories ({{famous.length}})</h3>
     <ul class="list-group">
-      <li v-for="story in famous"  class="list-group-item">
+      <li v-for="story in famous" :key="story.id" class="list-group-item">
         {{ story.writer }} said "{{ story.plot }}".
         Story upvotes {{ story.upvotes }}.
       </li>

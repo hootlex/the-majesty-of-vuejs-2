@@ -6,9 +6,7 @@
 <body class="container-fluid">
   <div id="app">
     <ul>
-        <li :class="{'completed' : task.done}"
-        :style="styleObject"
-        v-for="task in tasks">
+        <li :class="{'completed' : task.done}" :style="styleObject" v-for="(task, index) in tasks" :key="index">
             {{task.body}}
         <button @click="completeTask(task)" class="btn">
             Just do it!
@@ -17,7 +15,7 @@
     </ul>
   </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
     el: '#app',

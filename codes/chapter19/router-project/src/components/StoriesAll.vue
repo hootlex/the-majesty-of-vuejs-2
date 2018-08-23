@@ -2,7 +2,7 @@
   <div class="">
     <h3>All Stories ({{stories.length}})</h3>
     <ul class="list-group">
-      <li v-for="story in stories" class="list-group-item">
+      <li v-for="story in stories" :key="story.id" class="list-group-item">
           <h5>{{ story.writer }} said "{{ story.plot }}"
             <span class="badge">{{ story.upvotes }}</span>
           </h5>

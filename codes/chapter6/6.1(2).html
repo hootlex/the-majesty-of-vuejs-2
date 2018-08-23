@@ -9,17 +9,13 @@
     <div>
       <h3>Alex's stories</h3>
       <ul class="list-group">
-        <li v-for="story in storiesBy('Alex')"
-        class="list-group-item"
-        >
+        <li v-for="(story, index) in storiesBy('Alex')" :key="index" class="list-group-item">
         {{ story.writer }} said "{{ story.plot }}"
       </li>
     </ul>
     <h3>John's stories</h3>
     <ul class="list-group">
-      <li v-for="story in storiesBy('John')"
-      class="list-group-item"
-      >
+      <li v-for="(story, index) in storiesBy('John')" :key="index" class="list-group-item">
       {{ story.writer }} said "{{ story.plot }}"
     </li>
   </ul>
@@ -28,13 +24,11 @@
   <label for="query">
     What are you looking for?
   </label>
-  <input v-model="query" class="form-control">
+  <input v-model="query" id="query" class="form-control">
 </div>
 <h3>Search results:</h3>
 <ul class="list-group">
-  <li v-for="story in search"
-  class="list-group-item"
-  >
+  <li v-for="(story, index) in search" :key="index" class="list-group-item">
   {{ story.writer }} said "{{ story.plot }}"
 </li>
 </ul>
@@ -43,7 +37,7 @@
 </pre>
 </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
   el: '.container',
@@ -84,6 +78,5 @@ new Vue({
     }
   }
 })
-
 </script>
 </html>

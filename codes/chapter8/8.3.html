@@ -16,10 +16,9 @@
     </div>
     <h1>Log:</h1>
     <ul class="list-group">
-      <li class="list-group-item" v-for="vote in log"> {{ vote }} </li>
+      <li class="list-group-item" v-for="(vote, index) in log" :key="index">{{ vote }}</li>
     </ul>
   </div>
-
 </body>
 <template id="food">
   <div class="text-center col-lg-4">
@@ -29,10 +28,8 @@
     <button class="btn btn-default" @click="vote">{{ name }}</button>
   </div>
 </template>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
-var bus = new Vue()
-
 Vue.component('food', {
   template: '#food',
   props: ['name'],
@@ -42,7 +39,7 @@ Vue.component('food', {
     }
   },
   methods: {
-      vote: function () {
+      vote: function (event) {
           this.votes++
           this.$emit('voted', event.srcElement.textContent)
       }

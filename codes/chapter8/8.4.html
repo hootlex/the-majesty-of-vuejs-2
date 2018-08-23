@@ -21,7 +21,7 @@
 
     <h1>Log:</h1>
     <ul class="list-group">
-      <li class="list-group-item" v-for="vote in votes.log"> {{ vote }} </li>
+      <li class="list-group-item" v-for="(vote, index) in votes.log" :key="index"> {{ vote }} </li>
     </ul>
   </div>
 </body>
@@ -33,7 +33,7 @@
     <button class="btn btn-default" @click="vote">{{ name }}</button>
   </div>
 </template>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 var bus = new Vue()
 

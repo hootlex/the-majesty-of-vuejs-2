@@ -9,13 +9,11 @@
       <div>
           <h3>Alex's stories</h3>
           <ul class="list-group">
-              <story v-for="story in storiesBy('Alex')"
-              :story="story"></story>
+              <story v-for="(story, index) in storiesBy('Alex')" :key="index" :story="story"></story>
           </ul>
           <h3>John's stories</h3>
           <ul class="list-group">
-              <story v-for="story in storiesBy('John')"
-              :story="story"></story>
+              <story v-for="(story, index) in storiesBy('John')" :key="index" :story="story"></story>
           </ul>
           <div class="form-group">
               <label for="query">What are you looking for?</label>
@@ -23,8 +21,7 @@
           </div>
           <h3>Search results:</h3>
           <ul class="list-group">
-              <story v-for="story in search"
-              :story="story"></story>
+              <story v-for="(story, index) in search" :key="index" :story="story"></story>
           </ul>
       </div>
   </div>
@@ -34,7 +31,7 @@
     </li>
   </template>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
     props: ['story'],
