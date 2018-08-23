@@ -39,7 +39,7 @@ Vue.component('food', {
     }
   },
   methods: {
-      vote: function () {
+      vote: function (event) {
           this.votes++
           this.$emit('voted', event.srcElement.textContent)
       }
