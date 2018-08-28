@@ -1,25 +1,25 @@
 <html>
 <head>
-  <title>Food Battle</title>
+  <title>Битва между продуктами</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container text-center">
-    <h1>Food Battle</h1>
+    <h1>Битва между продуктами</h1>
     <p style="font-size: 140px;">
       {{ votes.count }}
     </p>
-    <button class="btn btn-danger" @click="reset">Reset votes</button>
+    <button class="btn btn-danger" @click="reset">Сбросить голоса</button>
     <hr>
 
     <div class="row">
-      <food name="Cheeseburger"></food>
-      <food name="Double Bacon Burger"></food>
-      <food name="Whooper"></food>
+      <food name="Чизбургер"></food>
+      <food name="Бургер с двойным беконом"></food>
+      <food name="Воппер"></food>
     </div>
     <hr>
 
-    <h1>Log:</h1>
+    <h1>Журнал:</h1>
     <ul class="list-group">
       <li class="list-group-item" v-for="(vote, index) in votes.log" :key="index"> {{ vote }} </li>
     </ul>
@@ -47,8 +47,8 @@ Vue.component('food', {
   },
   methods: {
     vote: function (event) {
-      // instead of using this.name
-      // we can access event's element's text
+      // вместо использования this.name
+      // мы можем получить доступ к элементу текста события
       var food = event.srcElement.textContent;
       this.votes++
       bus.$emit('voted', food)
@@ -73,7 +73,7 @@ new Vue({
   {
     countVote: function (food) {
       this.votes.count++
-      this.votes.log.push(food + ' received a vote.')
+      this.votes.log.push(food + ' получил голос.')
     },
     reset: function () {
       this.votes = {

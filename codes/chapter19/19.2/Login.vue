@@ -4,12 +4,12 @@
       <h2>Sign In</h2>
       <form class="form-inline">
         <div class="form-group">
-          <input class="form-control" placeholder="Email">
+          <input class="form-control" placeholder="Электронная почта">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Пароль">
         </div>
-        <button type="submit" class="btn btn-default">Sign in</button>
+        <button type="submit" class="btn btn-default">Войти</button>
       </form>
     </div>
   </div>
@@ -18,7 +18,7 @@
 <script>
 export default {
   created () {
-    console.log('login')
+    console.log('логин')
   }
 }
 </script>

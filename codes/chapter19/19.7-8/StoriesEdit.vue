@@ -2,7 +2,7 @@
   <div>
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
-          <h3>Editing</h3>
+          <h3>Редактирование</h3>
           <form>
             <div class="form-group col-md-offset-2 col-md-8">
               <input class="form-control" v-model="story.plot">

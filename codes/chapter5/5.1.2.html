@@ -1,7 +1,7 @@
 <html>
 <head>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<title>Upvote</title>
+<title>Проголосовать</title>
 <style>
     .container {
         padding-top: 75px;
@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <button class="btn btn-primary btn-lg btn-block" v-on:click="upvote">
-            Upvote! {{upvotes}}
+            Проголосовать! {{upvotes}}
         </button>
     </div>
 </body>
@@ -22,10 +22,10 @@ new Vue({
     data: {
         upvotes: 0
     },
-    // define methods under the **`methods`** object
+    // определить методы в объекте **`methods`**
     methods: {
         upvote: function () {
-            // **`this`** inside methods points to the Vue instance
+            // **`this`** внутри методов указывает на Vue-экземпляр
             this.upvotes++;
         }
     }

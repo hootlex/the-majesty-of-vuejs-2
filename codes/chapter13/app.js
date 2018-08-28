@@ -16,19 +16,21 @@ Vue.component('story', {
         },
         updateStory: function (story) {
             this.$http.patch('/api/stories/' + story.id, story)
-            //Set editing to false to show actions again and hide the inputs
+            /* Установим false в свойство editing, чтобы показывать снова 
+            кнопки действий и скрывать поля ввода */
             story.editing = false;
         },
         storeStory: function (story) {
             this.$http.post('/api/stories/', story).then(function (response) {
                 /*
-                 After the the new story is stored in the database fetch again all stories with
-                 vm.fetchStories();
-                 Or Better, update the id of the created story
-                 */
+                После сохранения новой истории в базе данных, получаем снова все истории
+                с помощью vm.fetchStories();
+                Или лучше обновим идентификатор созданной истории
+                */
                 Vue.set(story, 'id', response.data.id);
 
-                //Set editing to false to show actions again and hide the inputs
+                /* Установим false в свойство editing, чтобы показывать снова 
+                кнопки действий и скрывать поля ввода */
                 story.editing = false;
             });
         },
@@ -48,7 +50,7 @@ new Vue({
     methods: {
         createStory: function () {
             var newStory = {
-                plot: "",
+                plot: '',
                 upvotes: 0,
                 editing: true
             };

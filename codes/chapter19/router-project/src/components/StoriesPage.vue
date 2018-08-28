@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2>Stories</h2>
-    <!-- navigation -->
+    <h2>Истории</h2>
+    <!-- навигация -->
     <router-link :to="{name: 'stories.all'}" exact>All</router-link>
     <router-link :to="{name: 'stories.famous'}">Trending</router-link>
-    <!-- route outlet -->
+    <!-- вывод маршрута -->
     <router-view></router-view>
   </div>
 </template>

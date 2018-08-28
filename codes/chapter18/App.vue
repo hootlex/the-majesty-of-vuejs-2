@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <img class="logo" src="./assets/logo.png">
-    <h1>Welcome to dynamic Components!</h1>
+    <h1>Добро пожаловать в динамические компоненты!</h1>
     <ul class="nav nav-tabs">
-    <!-- set 'active' class conditionally -->
+      <!-- установка класса 'active' в зависимости от условия -->
       <li v-for="(page, index) in pages" :key="index" :class="isActivePage(page) ? 'active' : ''">
-      <!-- use links to change between tabs -->
+        <!-- используем ссылки для изменения табов -->
         <a @click="setPage(page)">{{page | capitalize}}</a>
       </li>
     </ul>
@@ -31,7 +31,7 @@ export default {
   },
   data () {
     return {
-      // the pages we want to render each time
+      // страницы, которые мы хотим отображать каждый раз
       pages: [
         'stories',
         'register',

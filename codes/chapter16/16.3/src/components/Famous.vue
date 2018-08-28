@@ -1,10 +1,10 @@
 <template>
   <div id="famous">
-    <h2>Trending stories<strong>({{famous.length}})</strong></h2>
+    <h2>Популярные истории <strong>({{famous.length}})</strong></h2>
     <ul class="list-group">
       <li v-for="(story, index) in famous" :key="index" class="list-group-item">
-        {{ story.writer }} said "{{ story.plot }}".
-        Story upvotes {{ story.upvotes }}.
+        {{ story.writer }} сказал "{{ story.plot }}".
+        Голосов за историю: {{ story.upvotes }}.
       </li>
     </ul>
   </div>
@@ -23,26 +23,26 @@ export default {
     return {
       stories: [
         {
-          plot: 'My horse is amazing.',
-          writer: 'Mr. Weebl',
+          plot: 'Моя лошадь потрясающая.',
+          writer: 'Мистер Уибл',
           upvotes: 28,
           voted: false
         },
         {
-          plot: 'Narwhals invented Shish Kebab.',
-          writer: 'Mr. Weebl',
+          plot: 'Нарвалы изобрели шашлык.',
+          writer: 'Мистер Уибл',
           upvotes: 8,
           voted: false
         },
         {
-          plot: 'The dark side of the Force is stronger.',
-          writer: 'Darth Vader',
+          plot: 'Тёмная сторона Силы сильнее.',
+          writer: 'Дарт Вейдер',
           upvotes: 52,
           voted: false
         },
         {
-          plot: 'One does not simply walk into Mordor',
-          writer: 'Boromir',
+          plot: 'Просто так в Мордор не попадёшь',
+          writer: 'Боромир',
           upvotes: 74,
           voted: false
         }

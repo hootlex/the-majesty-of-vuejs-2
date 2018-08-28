@@ -1,25 +1,25 @@
 <html>
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Awesome Stories</title>
+    <title>Потрясающие истории</title>
 </head>
 <body>
   <div class="container">
-      <h1>Lets hear some stories!</h1>
+      <h1>Давайте послушаем несколько историй!</h1>
       <div>
-          <h3>Alex's stories</h3>
+          <h3>Истории Алекса</h3>
           <ul class="list-group">
               <story v-for="(story, index) in storiesBy('Alex')" :key="index" :story="story"></story>
           </ul>
-          <h3>John's stories</h3>
+          <h3>Истории Джона</h3>
           <ul class="list-group">
               <story v-for="(story, index) in storiesBy('John')" :key="index" :story="story"></story>
           </ul>
           <div class="form-group">
-              <label for="query">What are you looking for?</label>
+              <label for="query">Что вы ищите?</label>
               <input v-model="query" class="form-control">
           </div>
-          <h3>Search results:</h3>
+          <h3>Результаты поиска:</h3>
           <ul class="list-group">
               <story v-for="(story, index) in search" :key="index" :story="story"></story>
           </ul>
@@ -27,7 +27,7 @@
   </div>
   <template id="story-template">
     <li class="list-group-item">
-      {{ story.writer }} said "{{ story.body }}"
+      {{ story.writer }} сказал "{{ story.body }}"
     </li>
   </template>
 </body>
@@ -43,20 +43,20 @@ new Vue({
   data: {
     stories: [
       {
-        body: "I crashed my car today!",
-        writer: "Alex"
+        body: 'Сегодня я разбил машину!',
+        writer: 'Алекс'
       },
       {
-        body: "Yesterday, someone stole my bag!",
-        writer: "John"
+        body: 'Вчера кто-то украл мою сумку!',
+        writer: 'Джон'
       },
       {
-        body: "Someone ate my chocolate...",
-        writer: "John"
+        body: 'Кто-то съел мой шоколад...',
+        writer: 'Джон'
       },
       {
-        body: "I ate someone's chocolate!",
-        writer: "Alex"
+        body: 'Я съел чей-то шоколад!',
+        writer: 'Алекс'
       },
     ],
     query: ' '

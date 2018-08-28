@@ -2,11 +2,11 @@
   <div>
     <img class="logo" src="./assets/logo.png">
     <h1>Welcome to Routing</h1>
-    <router-link :to="{ name: 'hello'}" exact>Home</router-link>
-    <router-link :to="{ name: 'login'}">Login</router-link>
-    <router-link :to="{ name: 'stories.all'}">Stories</router-link>
+    <router-link :to="{ name: 'hello'}" exact>Главная</router-link>
+    <router-link :to="{ name: 'login'}">Логин</router-link>
+    <router-link :to="{ name: 'stories.all'}">Истории</router-link>
     <transition name="fade">
-      <!-- route outlet -->
+      <!-- вывод маршрута -->
       <router-view></router-view>
     </transition>
   </div>

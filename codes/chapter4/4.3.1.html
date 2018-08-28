@@ -1,15 +1,15 @@
 <html>
 <head>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Stories</title>
+    <title>Истории</title>
 </head>
 <body>
     <div class="container">
-        <h1>Let's hear some stories!</h1>
+        <h1>Давайте послушаем несколько историй!</h1>
         <div>
           <ul class="list-group">
               <li v-for="(story, index) in stories" :key="index" class="list-group-item">
-                  {{index}} {{ story.writer }} said "{{ story.plot }}"
+                  {{index}} {{ story.writer }} сказал "{{ story.plot }}"
               </li>
           </ul>
         </div>
@@ -25,20 +25,20 @@ new Vue({
     data: {
         stories: [
             {
-                plot: "I crashed my car today!",
-                writer: "Alex"
+                plot: 'Сегодня я разбил машину!',
+                writer: 'Алекс'
             },
             {
-                plot: "Yesterday, someone stole my bag!",
-                writer: "John"
+                plot: 'Вчера кто-то украл мою сумку!',
+                writer: 'Джон'
             },
             {
-                plot: "Someone ate my chocolate...",
-                writer: "John"
+                plot: 'Кто-то съел мой шоколад...',
+                writer: 'Джон'
             },
             {
-                plot: "I ate someone's chocolate!",
-                writer: "Alex"
+                plot: 'Я съел чей-то шоколад!',
+                writer: 'Алекс'
             },
         ]
     }

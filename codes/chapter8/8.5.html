@@ -1,12 +1,12 @@
 <html>
 <head>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <title>Hello Vue</title>
+  <title>Привет, Vue</title>
 </head>
 <body>
   <div id="app">
     <div class="container">
-      <h1>Let's hear some stories!</h1>
+      <h1>Давайте послушаем несколько историй!</h1>
       <ul class="list-group">
         <story v-for="(story, index) in stories"
           :key="index"
@@ -22,22 +22,22 @@
 </div>
 <template id="story-template">
   <li class="list-group-item">
-    {{ story.writer }} said "{{ story.plot }}".
-    Story upvotes {{ story.upvotes }}.
+    {{ story.writer }} сказал "{{ story.plot }}".
+    Голосов за историю: {{ story.upvotes }}.
     <button v-show="!story.voted" @click="upvote" class="btn btn-default">
-      Upvote
+      Проголосовать
     </button>
     <button v-show="!isFavorite" @click="markAsFavorite" class="btn btn-primary">
-      Favorite
+      Добавить в избранное
   </button>
   <span v-show="isFavorite" class="glyphicon glyphicon-star pull-right" aria-hidden="true"></span>
   </li>
 </template>
 </body>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.8/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
-  template: "#story-template",
+  template: '#story-template',
   props: ['story', 'favorite'],
   methods:{
     upvote: function () {
@@ -45,8 +45,8 @@ Vue.component('story', {
       this.story.voted = true;
     },
     markAsFavorite: function () {
-      // 'update' is just the name of the custom event
-      // it could be anything. ex: fav-update
+      // 'update' — это просто имя пользовательского события
+      // это может быть что угодно, например, fav-update
       this.$emit('update', this.story)
     },
   },
@@ -62,26 +62,26 @@ new Vue({
   data: {
     stories: [
       {
-        plot: 'My horse is amazing.',
-        writer: 'Mr. Weebl',
+        plot: 'Моя лошадь потрясающая.',
+        writer: 'Мистер Уибл',
         upvotes: 28,
         voted: false,
       },
       {
-        plot: 'Narwhals invented Shish Kebab.',
-        writer: 'Mr. Weebl',
+        plot: 'Нарвалы изобрели шашлык.',
+        writer: 'Мистер Уибл',
         upvotes: 8,
         voted: false,
       },
       {
-        plot: 'The dark side of the Force is stronger.',
-        writer: 'Darth Vader',
+        plot: 'Тёмная сторона Силы сильнее.',
+        writer: 'Дарт Вейдер',
         upvotes: 49,
         voted: false,
       },
       {
-        plot: 'One does not simply walk into Mordor',
-        writer: 'Boromir',
+        plot: 'Просто так в Мордор не попадёшь',
+        writer: 'Боромир',
         upvotes: 74,
         voted: false,
       },

@@ -1,35 +1,35 @@
 <html>
 <head>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  <title>User Stories</title>
+  <title>Истории пользователей</title>
 </head>
 <body>
   <div class="container">
-    <h1>Let's hear some stories!</h1>
+    <h1>Давайте послушаем несколько историй!</h1>
     <div>
-      <h3>Alex's stories</h3>
+      <h3>Истории Алекса</h3>
       <ul class="list-group">
         <li v-for="(story, index) in storiesBy('Alex')" :key="index" class="list-group-item">
-        {{ story.writer }} said "{{ story.plot }}"
+        {{ story.writer }} сказал "{{ story.plot }}"
       </li>
     </ul>
-    <h3>John's stories</h3>
+    <h3>Истории Джона</h3>
     <ul class="list-group">
       <li v-for="(story, index) in storiesBy('John')" :key="index" class="list-group-item">
-      {{ story.writer }} said "{{ story.plot }}"
+      {{ story.writer }} сказал "{{ story.plot }}"
     </li>
   </ul>
 </div>
 <div class="form-group">
   <label for="query">
-    What are you looking for?
+    Что вы ищите?
   </label>
   <input v-model="query" id="query" class="form-control">
 </div>
-<h3>Search results:</h3>
+<h3>Результаты поиска:</h3>
 <ul class="list-group">
   <li v-for="(story, index) in search" :key="index" class="list-group-item">
-  {{ story.writer }} said "{{ story.plot }}"
+  {{ story.writer }} сказал "{{ story.plot }}"
 </li>
 </ul>
 <pre>
@@ -44,20 +44,20 @@ new Vue({
   data: {
     stories: [
       {
-        plot: "I crashed my car today!",
-        writer: "Alex"
+        plot: 'Сегодня я разбил машину!',
+        writer: 'Алекс'
       },
       {
-        plot: "Yesterday, someone stole my bag!",
-        writer: "John"
+        plot: 'Вчера кто-то украл мою сумку!',
+        writer: 'Джон'
       },
       {
-        plot: "Someone ate my chocolate...",
-        writer: "John"
+        plot: 'Кто-то съел мой шоколад...',
+        writer: 'Джон'
       },
       {
-        plot: "I ate someone's chocolate!",
-        writer: "Alex"
+        plot: 'Я съел чей-то шоколад!',
+        writer: 'Алекс'
       },
     ],
     query: ' '

@@ -1,8 +1,8 @@
 <template>
   <ul class="list-group">
     <li v-for="(story, index) in stories" :key="index" class="list-group-item">
-      {{ story.writer }} said "{{ story.plot }}"
-      Story upvotes {{ story.upvotes }}.
+      {{ story.writer }} сказал "{{ story.plot }}"
+      Голосов за историю: {{ story.upvotes }}.
     </li>
   </ul>
 </template>
@@ -12,7 +12,7 @@ import {store} from '../store.js'
 export default {
   data () {
     return {
-      // Bind directly to stories
+      // Привязка напрямую со stories
       stories: store.stories
     }
   }

@@ -1,14 +1,14 @@
 <html>
 <head>
-  <title>Calculator</title>
+  <title>Калькулятор</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Type 2 numbers and choose operation.</h1>
+    <h1>Введите 2 числа для вычисления их суммы.</h1>
     <form class="form-inline">
-      <!-- Notice here the special attribute 'number'
-      is passed in order to parse inputs as numbers.-->
+      <!-- Обратите внимание, специальный атрибут 'number'
+      передается для разбора входных данных как числа. -->
       <input v-model.number="a"  class="form-control">
       <select v-model="operator" class="form-control">
         <option>+</option>
@@ -16,11 +16,11 @@
         <option>*</option>
         <option>/</option>
       </select>
-      <!-- Notice here the special attribute 'number'
-      is passed in order to parse inputs as numbers.-->
+      <!-- Обратите внимание, специальный атрибут 'number'
+      передается для разбора входных данных как числа. -->
       <input v-model.number="b" class="form-control">
   </form>
-  <h2>Result: {{a}}  {{operator}}  {{b}} = {{c}}</h2>
+  <h2>Результат: {{a}}  {{operator}}  {{b}} = {{c}}</h2>
   <pre>
     {{ $data }}
   </pre>
@@ -33,7 +33,7 @@ new Vue({
   data: {
     a: 1,
     b: 2,
-    operator: "+",
+    operator: '+',
   },
   computed: {
     c: function () {

@@ -1,13 +1,13 @@
 <template>
-  <div class="">
-    <h3>All Stories ({{stories.length}})</h3>
+  <div class=''>
+    <h3>Все истории ({{stories.length}})</h3>
     <ul class="list-group">
       <li v-for="story in stories" :key="story.id" class="list-group-item">
-          <h5>{{ story.writer }} said "{{ story.plot }}"
+          <h5>{{ story.writer }} сказал "{{ story.plot }}"
             <span class="badge">{{ story.upvotes }}</span>
           </h5>
 
-          <router-link :to="{ name: 'stories.edit', params: { id: story.id }}" tag="button" class="btn btn-default" exact>Edit</router-link>
+          <router-link :to="{ name: 'stories.edit', params: { id: story.id }}" tag="button" class="btn btn-default" exact>Редактировать</router-link>
       </li>
     </ul>
   </div>
@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted () {
-    console.log('stories')
+    console.log('истории')
   }
 }
 </script>

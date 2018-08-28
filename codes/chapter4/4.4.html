@@ -1,11 +1,11 @@
 <html>
 <head>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Stories</title>
+    <title>Истории</title>
 </head>
 <body>
   <div class="container">
-      <h1>Let's hear some stories!</h1>
+      <h1>Давайте послушаем несколько историй!</h1>
       <ul class="list-group">
           <li v-for="(value, key, index) in story" :key="index" class="list-group-item">
               {{index}} : {{key}} : {{value}}
@@ -19,8 +19,8 @@ new Vue({
     el: '.container',
     data: {
         story: {
-            plot: "Someone ate my chocolate...",
-            writer: 'John',
+            plot: 'Кто-то съел мой шоколад...',
+            writer: 'Джон',
             upvotes: 47
         }
     }

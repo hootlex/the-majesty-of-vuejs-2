@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <img class="logo" src="./assets/logo.png">
-    <h1>Welcome to Routing!</h1>
-    <router-link to="/" exact>Home</router-link>
-    <router-link to="/login">Login</router-link>
-    <a v-link="{ path: '/' }">Home</a>
-    <a v-link="{ path: '/login' }">Login</a>
-    <!-- route outlet -->
+    <h1>Добро пожаловать в маршрутизацию!</h1>
+    <router-link to="/" exact>Главная</router-link>
+    <router-link to="/login">Логин</router-link>
+    <a v-link="{ path: '/' }">Главная</a>
+    <a v-link="{ path: '/login' }">Логин</a>
+    <!-- вывод маршрута -->
     <router-view></router-view>
   </div>
 </template>

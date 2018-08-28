@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stories</title>
+    <title>Истории</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 
 <body>
 <main>
     <div class="container">
-        <h1>Stories</h1>
+        <h1>Истории</h1>
         <div id="v-app">
             <table class="table table-striped">
                 <tr>
                     <th>#</th>
-                    <th>Plot</th>
-                    <th>Writer</th>
-                    <th>Upvotes</th>
-                    <th>Actions</th>
+                    <th>Сюжет</th>
+                    <th>Автор</th>
+                    <th>Кол-во голосов</th>
+                    <th>Действия</th>
                 </tr>
                 <tr v-for="story in stories" :key="story.id" is="story" :story="story"></tr>
             </table>
-            <p class="lead">Here's a list of all your stories.
-                <button @click="createStory()" class="btn btn-primary">Add a new one?</button>
+            <p class="lead">Вот список всех ваших историй.
+                <button @click="createStory()" class="btn btn-primary">Добавить новую историю?</button>
             </p>
             <pre>{{ $data }}</pre>
         </div>
@@ -53,17 +53,17 @@
         </td>
         <td>
             <div class="btn-group" v-if="!story.editing">
-                <button @click="upvoteStory(story)" class="btn btn-primary">Upvote</button>
-                <button @click="editStory(story)" class="btn btn-default">Edit</button>
-                <button @click="deleteStory(story)" class="btn btn-danger">Delete</button>
+                <button @click="upvoteStory(story)" class="btn btn-primary">Проголосовать</button>
+                <button @click="editStory(story)" class="btn btn-default">Редактировать</button>
+                <button @click="deleteStory(story)" class="btn btn-danger">Удалить</button>
             </div>
             <div class="btn-group" v-else>
-                <!--If the story is taken from the db then it will have an id-->
-                <button v-if="story.id" class="btn btn-primary" @click="updateStory(story)">Update Story</button>
-                <!--If the story is new we want to store it-->
-                <button v-else class="btn btn-success" @click="storeStory(story)">Save New Story</button>
-                <!--Always show cancel-->
-                <button @click="story.editing=false" class="btn btn-default">Cancel</button>
+                <!-- Если история получена с базы данных, она имеет идентификатор -->
+                <button v-if="story.id" class="btn btn-primary" @click="updateStory(story)">Обновить историю</button>
+                <!-- Если история новая, значит мы хотим сохранить её -->
+                <button v-else class="btn btn-success" @click="storeStory(story)">Сохранить историю</button>
+                <!-- Всегда показывать кнопку отмены -->
+                <button @click="story.editing=false" class="btn btn-default">Отмена</button>
             </div>
         </td>
     </tr>

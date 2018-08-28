@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <h1>Welcome to Routing!</h1>
-    <router-link :to="{name: 'hello'}" exact>Home</router-link>
-    <router-link :to="{name: 'login'}">Login</router-link>
-    <router-link :to="{ name: 'stories.all'}">Stories</router-link>
+    <h1>Добро пожаловать в маршрутизацию!</h1>
+    <router-link :to="{name: 'hello'}" exact>Главная</router-link>
+    <router-link :to="{name: 'login'}">Логин</router-link>
+    <router-link :to="{ name: 'stories.all'}">Истории</router-link>
     <transition enter-active-class="animated rollIn" leave-active-class="animated rollOut">
       <router-view></router-view>
     </transition>

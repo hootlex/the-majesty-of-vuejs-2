@@ -54,7 +54,7 @@ new Vue({
             var vm = this;
             this.$http.get('/api/movies')
                 .then(function (response) {
-                    // set data on vm
+                    // установить данные в vm
                     var moviesReady = response.data.map(function (movie) {
                         movie.editing = false;
                         return movie

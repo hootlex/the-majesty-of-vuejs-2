@@ -4,7 +4,7 @@
     <h1>
       Welcome to Palet town!
     </h1>
-    <!-- route outlet -->
+    <!-- вывод маршрута -->
     <router-view></router-view>
   </div>
 </template>

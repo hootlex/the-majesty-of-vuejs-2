@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      msg: 'No! I want to use the <component> element!'
+      msg: 'Нет! Я хочу использовать элемент <component>!'
     }
   }
 }

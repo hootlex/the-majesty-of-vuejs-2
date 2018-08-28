@@ -1,29 +1,29 @@
 export const store = {
   stories: [
     {
-      plot: 'My horse is amazing.',
-      writer: 'Mr. Weebl',
+      plot: 'Моя лошадь потрясающая.',
+      writer: 'Мистер Уибл',
       upvotes: 28,
       voted: false,
       id: 1
     },
     {
-      plot: 'Narwhals invented Shish Kebab.',
+      plot: 'Нарвалы изобрели шашлык.',
       writer: 'Mr Weebl',
       upvotes: 8,
       voted: false,
       id: 2
     },
     {
-      plot: 'The dark side of the Force is stronger.',
-      writer: 'Darth Vader',
+      plot: 'Тёмная сторона Силы сильнее.',
+      writer: 'Дарт Вейдер',
       upvotes: 52,
       voted: false,
       id: 3
     },
     {
-      plot: 'One does not simply walk into Mordor',
-      writer: 'Boromir',
+      plot: 'Просто так в Мордор не попадёшь',
+      writer: 'Боромир',
       upvotes: 74,
       voted: false,
       id: 4

@@ -1,26 +1,26 @@
 <html>
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Awesome Stories</title>
+    <title>Потрясающие истории</title>
 </head>
 <body>
     <div class="container">
-        <story v-bind:story="{plot: 'My horse is amazing.', writer: 'Mr. Weebl'}">
+        <story v-bind:story="{plot: 'Моя лошадь потрясающая.', writer: 'Мистер Уибл'}">
         </story>
-        <story v-bind:story="{plot: 'Narwhals invented Shish Kebab.', writer: 'Mr. Weebl'}">
+        <story v-bind:story="{plot: 'Нарвалы изобрели шашлык.', writer: 'Мистер Уибл'}">
         </story>
-        <story v-bind:story="{plot: 'The dark side of the Force is stronger.', writer: 'Darth Vader'}">
+        <story v-bind:story="{plot: 'Тёмная сторона Силы сильнее.', writer: 'Дарт Вейдер'}">
         </story>
     </div>
     <template id="story-template">
-      <h1>{{ story.writer }} said "{{ story.plot }}"</h1>
+      <h1>{{ story.writer }} сказал "{{ story.plot }}"</h1>
     </template>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
     props: ['story'],
-    template: "#story-template"
+    template: '#story-template'
 });
 
 new Vue({

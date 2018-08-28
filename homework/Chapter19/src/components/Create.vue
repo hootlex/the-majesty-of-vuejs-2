@@ -8,7 +8,7 @@
     </div>
 
     <br>
-    <button class="btn btn-default" @click="cancel">Cancel</button>
+    <button class="btn btn-default" @click="cancel">Отмена</button>
     <button class="btn btn-success" @click="add">Save</button>
   </div>
 </template>

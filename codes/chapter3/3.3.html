@@ -1,14 +1,14 @@
 <html>
 <head>
-    <title>Hello Vue</title>
+    <title>Привет, Vue</title>
 </head>
 <body>
 <div id="app">
-    <h1 v-if="!message">You must send a message for help!</h1>
+    <h1 v-if="!message">Вы должны написать сообщение для получения помощи!</h1>
     <h2 v-else>You have sent a message!</h2>
     <textarea v-model="message"></textarea>
     <button v-show="message">
-        Send word to allies for help!
+        Отправить послание всем союзникам для помощи!
     </button>
     <pre>
         {{ $data }}
@@ -20,7 +20,7 @@
     new Vue({
         el: '#app',
         data: {
-             message: 'Our king is dead! Send help!'
+             message: 'Наш король мёртв! Пришлите подмогу!'
         }
     })
 </script>

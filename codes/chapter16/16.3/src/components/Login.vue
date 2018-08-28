@@ -1,16 +1,16 @@
 <template>
   <div id="login">
     <h2>Sign in</h2>
-    <input type="email" placeholder="Email address">
-    <input type="password" placeholder="Password">
-    <button class="btn">Sign in</button>
+    <input type="email" placeholder="Электронная почта">
+    <input type="password" placeholder="Пароль">
+    <button class="btn">Войти</button>
   </div>
 </template>
 
 <script>
 export default {
   created () {
-    console.log('login')
+    console.log('логин')
   }
 }
 </script>

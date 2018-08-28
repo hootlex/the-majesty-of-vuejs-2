@@ -1,9 +1,9 @@
 <template>
   <div id="famous">
-    <h3>Trending stories ({{famous.length}})</h3>
+    <h3>Популярные истории  ({{famous.length}})</h3>
     <ul class="list-group">
       <li v-for="story in famous" :key="story.id" class="list-group-item">
-        <h5>{{ story.writer }} said "{{ story.plot }}"
+        <h5>{{ story.writer }} сказал "{{ story.plot }}"
           <span class="badge">{{ story.upvotes }}</span>
         </h5>
       </li>

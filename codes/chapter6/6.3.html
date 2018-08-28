@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Calculator</title>
+  <title>Калькулятор</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -8,8 +8,8 @@
     <h1>Let's hear some famous stories! ({{famous.length}})</h1>
     <ul class="list-group">
       <li v-for="(story, index) in famous" :key="index" class="list-group-item">
-        {{ story.writer }} said "{{ story.plot }}"
-        and upvoted {{ story.upvotes }} times.
+        {{ story.writer }} сказал "{{ story.plot }}"
+        и получил {{ story.upvotes }} голосов.
     </li>
   </ul>
 </div>
@@ -21,23 +21,23 @@ new Vue({
   data: {
     stories: [
       {
-        plot: "I crashed my car today!",
-        writer: "Alex",
+        plot: 'Сегодня я разбил машину!',
+        writer: 'Алекс',
         upvotes: 28
       },
       {
-        plot: "Yesterday, someone stole my bag!",
-        writer: "John",
+        plot: 'Вчера кто-то украл мою сумку!',
+        writer: 'Джон',
         upvotes: 8
       },
       {
-        plot: "Someone ate my chocolate...",
-        writer: "John",
+        plot: 'Кто-то съел мой шоколад...',
+        writer: 'Джон',
         upvotes: 51
       },
       {
-        plot: "I ate someone's chocolate!",
-        writer: "Alex",
+        plot: 'Я съел чей-то шоколад!',
+        writer: 'Алекс',
         upvotes: 74
       },
     ]

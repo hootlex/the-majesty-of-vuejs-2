@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Food Battle</title>
+  <title>Битва между продуктами</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -10,11 +10,11 @@
     </p>
 
     <div class="row">
-      <food @voted="countVote" name="Cheeseburger"></food>
-      <food @voted="countVote" name="Double Bacon Burger"></food>
+      <food @voted="countVote" name="Чизбургер"></food>
+      <food @voted="countVote" name="Бургер с двойным беконом"></food>
       <food @voted="countVote" name="Rodeo Burger"></food>
     </div>
-    <h1>Log:</h1>
+    <h1>Журнал:</h1>
     <ul class="list-group">
       <li class="list-group-item" v-for="(vote, index) in log" :key="index">{{ vote }}</li>
     </ul>
@@ -55,7 +55,7 @@ new Vue({
   {
     countVote: function (food) {
       this.votes++
-      this.log.push(food + ' received a vote.')
+      this.log.push(food + ' получил голос.')
     }
   }
 })

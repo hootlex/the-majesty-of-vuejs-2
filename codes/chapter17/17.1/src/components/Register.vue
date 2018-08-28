@@ -1,12 +1,12 @@
 <template>
   <div id="register">
-    <h2>Register Form</h2>
-    <input placeholder="First Name" class="form-control">
-    <input placeholder="Last Name" class="form-control">
-    <input placeholder="Email address" class="form-control">
-    <input placeholder="Pick a password" class="form-control">
-    <input placeholder="Confirm password" class="form-control">
-    <button class="btn">Sign up</button>
+    <h2>Форма регистрации</h2>
+    <input placeholder="Имя" class="form-control">
+    <input placeholder="Фамилия" class="form-control">
+    <input placeholder="Электронная почта" class="form-control">
+    <input placeholder="Пароль" class="form-control">
+    <input placeholder="Подтверждение пароля" class="form-control">
+    <button class="btn">Зарегистрироваться</button>
     <famous :stories="stories"></famous>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
     Famous
   },
   created () {
-    console.log('register')
+    console.log('регистрация')
   }
 }
 </script>
