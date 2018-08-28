@@ -21,205 +21,205 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 $starwars = [
     [
-        "plot" => "When 900 years old, you reach… Look as good, you will not.",
-        "writer" => "Yoda"
+        'plot' => 'На чувства свои вы всегда и во всем опираться должны',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "The Dark Side of the Force is the pathway to many abilities some consider to be… Unnatural.",
-        "writer" => "Senator Palpatine"
+        'plot' => 'Кто-нибудь уберет этот коврик с моей дороги?',
+        'writer' => 'Принцесса Лея'
     ],
     [
-        "plot" => "You don’t know how hard I found it, signing the order to terminate your life",
-        "writer" => "Governor ‘Grand Moff’ Tarkin"
+        'plot' => 'Наставники всегда указывают на наши недостатки. Это нужно для нашего роста',
+        'writer' => 'Падме Амидала'
     ],
     [
-        "plot" => "He’s holding a thermal detonator!",
-        "writer" => " C-3PO"
+        'plot' => 'Риск велик, но без риска в этой жизни можно лишь лежать на удобной лежанке и рассуждать. Да и то – рискуешь, что кто-то нарушит твой блаженный покой: например, упавшая на голову люстра',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "I sense great fear in you, Skywalker. You have hate… you have anger… but you don’t use them.",
-        "writer" => "Count Dooku"
+        'plot' => 'Воистину удивителен ребёнка разум.',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "Great, kid. Don’t get cocky",
-        "writer" => "Han Solo"
+        'plot' => 'Теперь, будь храбр и не оглядывайся назад. Не оглядывайся',
+        'writer' => 'Шми Скайуокер'
     ],
     [
-        "plot" => "Luke, you can destroy the Emperor. He has foreseen this. It is your destiny. Join me, and together we can rule the galaxy as father and son.",
-        "writer" => "Darth Vader"
+        'plot' => 'А может крутануться? Это идея!',
+        'writer' => 'Энакин Скайуокер'
     ],
     [
-        "plot" => "You can’t win, Darth. Strike me down, and I will become more powerful than you could possibly imagine.",
-        "writer" => "Obi Wan Kenobi"
+        'plot' => 'Никогда не говори мне о шансах!',
+        'writer' => 'Хан Соло'
     ],
     [
-        "plot" => "It's a trap!",
-        "writer" => "Admiral Ackbar"
+        'plot' => 'Боязнь потери к Темной стороне привести может',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "Aren't you a little short for a storm trooper?",
-        "writer" => "Princess Leia"
+        'plot' => 'Старая система мертва, сенатор. И вы поступите достаточно благоразумно, если не будете упорствовать и вольетесь в новую',
+        'writer' => 'Дарт Вейдер'
     ],
     [
-        "plot" => "Why you stuck-up, half-witted, scruffy-looking nerf-herder!",
-        "writer" => "Princess Leia"
+        'plot' => 'Если ты наделяешь себя властью забирать жизни, жаждой власти и владением другими, то у тебя нет ничего',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Mmm. Lost a planet, Master Obi-Wan has. How embarrassing.",
-        "writer" => "Yoda"
+        'plot' => 'Вы были правы в одном, Мастер; переговоры были недолгими.',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Lando’s not a system he’s a man!",
-        "writer" => "Han Solo"
+        'plot' => 'На оружие полагаешься, но оружием нельзя выиграть сражение. Разум твой всего сильнее',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "These aren’t the droids you’re looking for...",
-        "writer" => "Obi Wan Kenobi"
+        'plot' => 'Восприятие управляет реальностью.',
+        'writer' => 'Квай-Гон Джин'
     ],
     [
-        "plot" => "Traveling through hyperspace ain't like dusting crops, farm boy.",
-        "writer" => "Han Solo"
+        'plot' => 'Нельзя остановить перемены, как нельзя остановить восход солнца',
+        'writer' => 'Шми Скайуокер'
     ],
     [
-        "plot" => "If there's a bright centre to the universe, you're on the planet that it's farthest from.",
-        "writer" => "Luke Skywalker"
+        'plot' => 'Личные чувства не должны мешать делу',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Fear is the path to the dark side.",
-        "writer" => " Yoda"
+        'plot' => 'Человек не является плохим только потому, что богат и любит удовольствия',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "Don't call me a mindless philosopher, you overweight glob of grease.",
-        "writer" => " C-3PO"
+        'plot' => 'Все умирает. Даже звезды сгорают',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Anakin, you’re breaking my heart! And you’re going down a path I cannot follow!",
-        "writer" => "Padme"
+        'plot' => 'Размер не имеет значения. Посмотри на меня. По размеру меня судишь, так? Гмм? Гмм. А не должен ты. Ибо мой союзник — Сила, и могущественный союзник она',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "Master Kenobi, you disappoint me. Yoda holds you in such high esteem. Surely you can do better!",
-        "writer" => "Count Dooku"
+        'plot' => 'Справедливость — это дело, за которое стоит сражаться',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "You were the chosen one! It was said that you would destroy the Sith, not join them.",
-        "writer" => "Obi Wan Kenobi"
+        'plot' => 'От слова «Демократия» уже откровенно тошнит. Даешь Империю во главе с Дартом Вейдером!',
+        'writer' => 'Дарт Вейдер'
     ],
     [
-        "plot" => "At last we will reveal ourselves to the Jedi. At last we will have revenge.",
-        "writer" => "Darth Maul"
+        'plot' => 'Решение принимаешь ты один. Но помнить ты должен, что делаешь это также и за других, кто стоит за твоим плечом',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "I’ve been waiting for you, Obi-Wan. We meet again, at last. The circle is now complete. When I left you, I was but the learner; now I am the master.",
-        "writer" => " Darth Vader"
+        'plot' => 'Помни, концентрируйся на моменте. Чувствуй, а не думай. Используй свои инстинкты',
+        'writer' => 'Квай-Гон Джин'
     ],
     [
-        "plot" => "Now, young Skywalker… you will die.",
-        "writer" => "The Emperor"
+        'plot' => 'Молодец! Отлично, Чуи, отлично. Всегда желудком думаешь',
+        'writer' => 'Хан Соло'
     ],
     [
-        "plot" => "I find your lack of faith disturbing.",
-        "writer" => " Darth Vader"
+        'plot' => 'Порой старинные воспоминания становятся источником величайших открытий. Внутри каждого из нас живет нечто, позволяющее заинтриговать кого угодно',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "The Force is strong with you. A powerful Sith you will become. Henceforth, you shall be known as Darth… Vader.",
-        "writer" => " Darth Sidious"
+        'plot' => 'Вещь чудесная — детская голова. Ответы ищет она, а не вопросы',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "There's always a bigger fish.",
-        "writer" => "Qui-Gon Jinn"
+        'plot' => 'Если противник превосходит тебя численно, лучший способ добиться победы — действовать неожиданно',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "Hello. I don't believe we have been introduced. R2-D2? A pleasure to meet you. I am C-3PO, Human-Cyborg Relations.",
-        "writer" => " C-3PO"
+        'plot' => 'Полёты — это для дроидов',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Ahh, hard to see, the Dark Side is.",
-        "writer" => "Yoda"
+        'plot' => 'Способность болтать — ещё не признак интеллекта',
+        'writer' => 'Квай-Гон Джин'
     ],
     [
-        "plot" => "Good Anakin. Good. Kill him. Kill him now.",
-        "writer" => "Chancellor Palpatine"
+        'plot' => 'Удивительная девушка. Или я убью её, или она нравится мне',
+        'writer' => 'Хан Соло'
     ],
     [
-        "plot" => "General Grievous, you're shorter than I expected.",
-        "writer" => " Anakin Skywalker"
+        'plot' => 'Очень трудно завоевать сердца и мысли существ, когда ты отсекаешь им головы и руки',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Don't get technical with me. What mission? What are you talking about? I've just about had enough of you. Go that way, you'll be malfunctioning in a day you near-sighted scrap pile.",
-        "writer" => " C-3PO"
+        'plot' => 'Никогда не бойся своих чувств. Они могут направлять тебя, если ты контролируешь их',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "Help me Obi-Wan Kenobi, you're my only hope.",
-        "writer" => "Princess Leia"
+        'plot' => 'Страх — это инстинкт, который учит нас быть осторожными. Тот, кто говорит, что идет в бой без страха, — самонадеянный глупец',
+        'writer' => 'Оби-Ван Кеноби'
     ],
     [
-        "plot" => "Obi-Wan Kenobi. Obi-Wan. Now that's a name I have not heard in a long time. A long time.",
-        "writer" => "Obi Wan Kenobi"
+        'plot' => 'Очисти мозг от вопросов. Спокоен будь в мире. Вопросов всегда больше, чем ответов',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "You came in that thing? You're braver than I thought.",
-        "writer" => "Princess Leia"
+        'plot' => 'То, что кто-то говорит, и то, что он испытывает, не обязательно и не всегда одно и то же',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "Laugh it up, Fuzz ball.",
-        "writer" => "Han Solo"
+        'plot' => 'Вы проиграли, Ваше величество. Я джедай, каким и мой отец был!',
+        'writer' => 'Люк Скайуокер'
     ],
     [
-        "plot" => "Sir, the possibility of successfully navigating an asteroid field is approximately 3,720 to 1.",
-        "writer" => "C-3PO"
+        'plot' => 'Мой союзник - Сила - могучий союзник. Жизнь её сотворила и вырастила. Её энергия окружает нас и связывает. Сила вокруг тебя, везде, между мной, тобой, деревом, камнем...',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "No. I am your Father.",
-        "writer" => "Darth Vader"
+        'plot' => 'Даже когда ты в чем-то уверен, нужно оставлять место для сомнения',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "I'm rather embarrassed, General Solo, but it appears that you are to be the main course at a banquet in my honour.",
-        "writer" => "C-3PO"
+        'plot' => 'И нечего на меня ругаться! Я переводчик. Я не отличу розетку от компьютерного терминала',
+        'writer' => 'C 3PO'
     ],
     [
-        "plot" => "Obi-Wan has taught you well.",
-        "writer" => " Darth Vader"
+        'plot' => 'Страх — это путь на Тёмную сторону. Страх порождает гнев. Гнев приводит к ненависти. Ненависть приводит к страданиям',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "Oh my. Space travel sound rather perilous. I can assure you they will never get me on one of those dreadful Star Ships.",
-        "writer" => " C-3PO"
+        'plot' => 'Вот так и умирает свобода — под гром аплодисментов...',
+        'writer' => 'Падме Амидала'
     ],
     [
-        "plot" => "One thing's for sure, we're all going to be a lot thinner.",
-        "writer" => "Han Solo"
+        'plot' => 'Ты недооцениваешь силу Темной стороны',
+        'writer' => 'Дарт Вейдер'
     ],
     [
-        "plot" => "The force is strong with this one.",
-        "writer" => "Darth Vader"
+        'plot' => 'Видимо, наша судьба — страдать. Это наше предназначение в жизни',
+        'writer' => 'C 3PO'
     ],
     [
-        "plot" => "Great shot kid, that was one in a million.",
-        "writer" => "Han Solo"
+        'plot' => 'Всегда много путей достичь цель есть. Испробовать их все должны вы',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "I suggest a new strategy, R2: let the Wookiee win.",
-        "writer" => "C-3PO"
+        'plot' => 'Берегитесь, наместник. Федерация зашла слишком далеко',
+        'writer' => 'Королева Амидала'
     ],
     [
-        "plot" => "Remember...the Force will be with you, always.",
-        "writer" => "Obi Wan Kenobi"
+        'plot' => 'Всегда найдётся рыба крупней.',
+        'writer' => 'Квай-Гон Джин'
     ],
     [
-        "plot" => "There is good in him. I've felt it.",
-        "writer" => "Luke Skywalker"
+        'plot' => 'Если хочешь выбраться незамеченным, выбирай самое оживленное место',
+        'writer' => 'Квай-Гон Джинн'
     ],
     [
-        "plot" => "You may dispense with the pleasantries, Commander. I am here to put you back on schedule.",
-        "writer" => "Darth Vader"
+        'plot' => 'Вопросов всегда больше, чем ответов',
+        'writer' => 'Йода'
     ],
     [
-        "plot" => "Luke, I don't want to lose you to the Emperor the way I lost Vader.",
-        "writer" => "Obi Wan Kenobi"
+        'plot' => 'Я не боюсь смерти. Я умирала каждый день до встречи с тобой',
+        'writer' => 'Падме Амидала'
     ],
     [
-        "plot" => "Death is a natural part of life. Rejoice for those around you who transform into the Force.",
-        "writer" => "Yoda"
-    ]
+        'plot' => 'Страх показаться дураком никогда не должен быть причиной делать что-либо. Или не делать. Это страх, рожденный из слабости',
+        'writer' => 'Квай-Гон Джинн'
+    ],
 ];
 
 

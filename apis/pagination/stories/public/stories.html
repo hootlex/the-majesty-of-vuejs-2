@@ -45,13 +45,15 @@
             {{story.id}}
         </td>
         <td class="col-md-6">
-            <input v-if="story.editing" v-model="story.plot" class="form-control">
-            <!--in other occasions show the story plot-->
+            <!-- если история редактируется, показываем поле ввода для сюжета -->
+            <input v-if="story.editing" v-model="story.plot" class="form-control" />
+            <!-- в остальных случаях показываем сюжет истории -->
             <span v-else>{{story.plot}}</span>
         </td>
         <td>
-            <input v-if="story.editing" v-model="story.writer" class="form-control">
-            <!--in other occasions show the story writer-->
+            <!-- если история редактируется, показываем поле ввода для автора -->
+            <input v-if="story.editing" v-model="story.writer" class="form-control"></input>
+            <!-- в остальных случаях показываем автора истории -->
             <span v-else>{{story.writer}}</span>
         </td>
         <td>

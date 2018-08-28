@@ -70,7 +70,7 @@ new Vue({
                 });
         },
         makePagination(data) {
-            //here we use response.data
+            // здесь мы используем response.data
             var pagination = {
                 current_page: data.current_page,
                 last_page: data.last_page,
