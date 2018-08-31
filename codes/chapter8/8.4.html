@@ -69,20 +69,19 @@ new Vue({
       log: []
     }
   },
-  methods:
-    {
-      countVote: function (food) {
-        this.votes.count++
-        this.votes.log.push(food + ' получил голос.')
-      },
-      reset: function () {
-        this.votes = {
-          count: 0,
-          log: []
-        }
-        bus.$emit('reset')
-      }
+  methods: {
+    countVote: function (food) {
+      this.votes.count++
+      this.votes.log.push(food + ' получил голос.')
     },
+    reset: function () {
+      this.votes = {
+        count: 0,
+        log: []
+      }
+      bus.$emit('reset')
+    }
+  },
   created() {
     bus.$on('voted', this.countVote)
   }

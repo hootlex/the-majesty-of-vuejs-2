@@ -51,13 +51,12 @@ new Vue({
     votes: 0,
     log: []
   },
-  methods:
-    {
-      countVote: function (food) {
-        this.votes++
-        this.log.push(food + ' получил голос.')
-      }
+  methods: {
+    countVote: function (food) {
+      this.votes++
+      this.log.push(food + ' получил голос.')
     }
+  }
 })
 </script>
 </html>

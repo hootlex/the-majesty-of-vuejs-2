@@ -18,11 +18,10 @@ new Vue({
   data: {
     votes: 0
   },
-  methods:
-    {
+  methods: {
       vote: function (writer) {
         this.$emit('voted')
-      },
+      }
     },
   created() {
     this.$on('voted', function (button) {
