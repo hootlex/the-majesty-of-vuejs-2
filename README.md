@@ -1,6 +1,6 @@
 # Величие Vue.js 2
 
-[![Book Cover](https://s3.amazonaws.com/titlepages.leanpub.com/vuejs2-russian/hero?1535732266)](https://leanpub.com/vuejs2-russian)
+[![Book Cover](https://s3.amazonaws.com/titlepages.leanpub.com/vuejs2-russian/large?1535732266)](https://leanpub.com/vuejs2-russian)
 
 Этот репозиторий для использования в учебных целях.
 
