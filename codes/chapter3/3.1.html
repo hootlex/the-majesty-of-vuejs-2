@@ -7,7 +7,7 @@
   <h1>Вы должны написать сообщение для получения помощи!</h1>
   <textarea v-model="message"></textarea>
   <br>
-  <button v-show="message">
+  <button type="submit" v-show="message">
     Отправить послание всем союзникам для помощи!
   </button>
   <pre>{{ $data }}</pre>

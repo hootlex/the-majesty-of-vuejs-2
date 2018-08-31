@@ -8,8 +8,8 @@
     </div>
 
     <br>
-    <button class="btn btn-default" @click="cancel">Отмена</button>
-    <button class="btn btn-success" @click="add">Сохранить</button>
+    <button type="button" class="btn btn-default" @click="cancel">Отмена</button>
+    <button type="button" class="btn btn-success" @click="add">Сохранить</button>
   </div>
 </template>
 

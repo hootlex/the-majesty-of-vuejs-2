@@ -9,7 +9,7 @@
         <div class="form-group">
           <input type="password" class="form-control" placeholder="Пароль">
         </div>
-        <button type="submit" class="btn btn-default">Войти</button>
+        <button type="submit" type="submit" class="btn btn-default">Войти</button>
       </form>
     </div>
   </div>

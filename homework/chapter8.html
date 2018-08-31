@@ -17,7 +17,7 @@
 <template id="chariot-template">
   <li class="list-group-item">
     <h4>У колесницы "{{ chariot.name }}" <strong>{{ chariot.horses }}</strong> лошадей!</h4>
-    <button @click="rideChariot(chariot)" class="btn btn-primary" :disabled="isCurrent">
+    <button type="button" @click="rideChariot(chariot)" class="btn btn-primary" :disabled="isCurrent">
       {{ action }}
     </button>
   </li>

@@ -8,8 +8,8 @@
             <input class="form-control" v-model="story.plot">
           </div>
           <div class="form-group col-md-12">
-            <button @click="saveChanges(story)" class="btn btn-success">Сохранить изменения</button>
-            <button @click="goBack" class="btn btn-default">Вернуться назад</button>
+            <button type="button" @click="saveChanges(story)" class="btn btn-success">Сохранить изменения</button>
+            <button type="button" @click="goBack" class="btn btn-default">Вернуться назад</button>
           </div>
         </form>
       </div>

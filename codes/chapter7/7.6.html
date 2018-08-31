@@ -17,7 +17,7 @@
   <li class="list-group-item">
     {{ story.writer }} сказал "{{ story.plot }}".
     Голосов за историю: {{ story.upvotes }}.
-    <button v-show="!story.voted" @click="upvote" class="btn btn-default">
+    <button type="button" v-show="!story.voted" @click="upvote" class="btn btn-default">
       Проголосовать
     </button>
   </li>

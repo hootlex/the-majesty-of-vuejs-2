@@ -7,9 +7,10 @@
       </li>
     </ul>
 
-    <button @click="goBack" class="btn btn-lg btn-primary">Вернуться обратно к категориям</button>
+    <button type="button" @click="goBack" class="btn btn-lg btn-primary">Вернуться обратно к категориям</button>
     <router-link :to="{ path: this.$route.params.name + '/pokemons/new', params: { name: this.$route.params.name }}" tag="button" class="btn btn-lg btn-success">Добавить нового покемона</router-link>
     <!-- <button
+      type="button"
       v-link="{ path: '/category/' + this.$route.params.name + '/pokemons/new' }"
       class="btn btn-lg btn-success">
       Добавить нового покемона

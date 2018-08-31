@@ -10,7 +10,7 @@
     <li v-for="(candidate, index) in candidates" :key="index" class="list-group-item">
       {{candidate.name}} {{candidate.votes}}
       <!-- увеличение голосов 'on:click'-->
-      <button class="btn btn-default" @click="candidate.votes++">Голосовать</button>
+      <button type="button" class="btn btn-default" @click="candidate.votes++">Голосовать</button>
     </li>
   </ul>
   <!-- обработка события клавиатуры -->

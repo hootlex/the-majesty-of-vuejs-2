@@ -3,7 +3,7 @@
     <h2>Вход</h2>
     <input type="email" placeholder="Электронная почта">
     <input type="password" placeholder="Пароль">
-    <button class="btn">Войти</button>
+    <button type="submit" class="btn">Войти</button>
   </div>
 </template>
 

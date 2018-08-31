@@ -8,7 +8,7 @@
   <ul>
     <li :class="{'completed' : task.done}" :style="styleObject" v-for="(task, index) in tasks" :key="index">
       {{task.body}}
-      <button @click="completeTask(task)" class="btn btn-success">
+      <button type="button" @click="completeTask(task)" class="btn btn-success">
         Просто сделай это!
       </button>
     </li>

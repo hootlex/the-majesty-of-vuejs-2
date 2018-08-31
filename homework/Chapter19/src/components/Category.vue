@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <button @click="goBack" class="btn btn-info">Обратно к категориям</button>
+    <button type="button" @click="goBack" class="btn btn-info">Обратно к категориям</button>
     <router-link
       :to="{ path: category.name + '/pokemons/new',
       params: { name: category.name }}"

@@ -6,7 +6,7 @@
     <input placeholder="Электронная почта" class="form-control">
     <input placeholder="Пароль" class="form-control">
     <input placeholder="Подтверждение пароля" class="form-control">
-    <button class="btn">Зарегистрироваться</button>
+    <button type="submit" class="btn">Зарегистрироваться</button>
     <famous ></famous>
   </div>
   </template>

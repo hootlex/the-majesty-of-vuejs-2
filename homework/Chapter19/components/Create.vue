@@ -3,8 +3,8 @@
     <h1>Добавить нового покемона!</h1>
     <input v-model="newPokemon.name" class="form-control">
     <br>
-    <button class="btn btn-lg btn-danger" @click="cancel">Отмена</button>
-    <button class="btn btn-lg btn-warning" @click="add">Добавить</button>
+    <button type="button" class="btn btn-lg btn-danger" @click="cancel">Отмена</button>
+    <button type="button" class="btn btn-lg btn-warning" @click="add">Добавить</button>
   </div>
 </template>
 

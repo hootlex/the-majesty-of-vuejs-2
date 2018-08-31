@@ -17,7 +17,7 @@
   <li  class="list-group-item">
     Планета: {{ planet.name }}
     Кол-во посещений: {{ planet.visits }}.
-    <button v-show="canBeVisited" @click="visit" class="btn btn-default">
+    <button type="button" v-show="canBeVisited" @click="visit" class="btn btn-default">
       Посетить
     </button>
     <span v-show="planet.visits > 0" class="fa fa-rocket fa-2x pull-right" aria-hidden="true">
