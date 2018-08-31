@@ -4,15 +4,15 @@
   <title>Привет, Vue</title>
 </head>
 <body>
-  <div class="container text-center">
-    <div class="box" v-bind:class="{ 'red' : color, 'blue' : !color }"></div>
-    <div class="box" v-bind:class="{ 'purple' : color, 'green' : !color }"></div>
-    <div class="box" v-bind:class="{ 'red' : color, 'blue' : !color }"></div>
-    <div class="box" v-bind:class="{ 'purple' : color, 'green' : !color }"></div>
-    <button v-on:click="flipColor" class="btn btn-block btn-success">
-      Переключить цвет!
-    </button>
-  </div>
+<div class="container text-center">
+  <div class="box" v-bind:class="{ 'red' : color, 'blue' : !color }"></div>
+  <div class="box" v-bind:class="{ 'purple' : color, 'green' : !color }"></div>
+  <div class="box" v-bind:class="{ 'red' : color, 'blue' : !color }"></div>
+  <div class="box" v-bind:class="{ 'purple' : color, 'green' : !color }"></div>
+  <button v-on:click="flipColor" class="btn btn-block btn-success">
+    Переключить цвет!
+  </button>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
@@ -22,7 +22,7 @@ new Vue({
     color: true
   },
   methods: {
-    flipColor: function() {
+    flipColor: function () {
       this.color = !this.color;
     }
   }
@@ -32,9 +32,11 @@ new Vue({
 .red {
   background: #ff0000;
 }
+
 .blue {
   background: #0000ff;
 }
+
 .box {
   float: left;
   width: 200px;
@@ -42,9 +44,11 @@ new Vue({
   margin: 40px;
   border: 1px solid rgba(0, 0, 0, .2);
 }
+
 .purple {
   background: #7B1FA2;
 }
+
 .green {
   background: #4CAF50;
 }

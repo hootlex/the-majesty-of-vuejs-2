@@ -4,15 +4,15 @@
   <title>Известные истории</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Давайте послушаем несколько историй!</h1>
-    <ul class="list-group">
-      <li v-for="(story, index) in orderedStories" :key="index" class="list-group-item">
+<div class="container">
+  <h1>Давайте послушаем несколько историй!</h1>
+  <ul class="list-group">
+    <li v-for="(story, index) in orderedStories" :key="index" class="list-group-item">
       {{ story.writer }} сказал "{{ story.plot }}"
       и получил {{ story.upvotes }} голосов.
     </li>
   </ul>
-  <!-- Without using the computed property. -->
+  <!-- Без использования вычисляемого свойства. -->
   <ul class="list-group">
     <li v-for="(story, index) in _.orderBy(stories, ['upvotes'], [order])" :key="index" class="list-group-item">
       {{ story.writer }} сказал "{{ story.plot }}"
@@ -21,18 +21,16 @@
   </ul>
   <button class="btn btn-default" v-on:click="reverseOrder">Обратный порядок</button>
 
-  <pre>
-    {{ $data }}
-  </pre>
+  <pre>{{ $data }}</pre>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
 <script type="text/javascript">
-  new Vue({
-    el: '.container',
-    data: {
-      stories: [
+new Vue({
+  el: '.container',
+  data: {
+    stories: [
       {
         plot: 'Сегодня я разбил машину!',
         writer: 'Алекс',
@@ -53,20 +51,20 @@
         writer: 'Алекс',
         upvotes: 74
       },
-      ],
-      order : 'desc'
-    },
-    methods: {
-      reverseOrder: function () {
-        this.order = (this.order === 'desc') ? 'asc' : 'desc'
-      }
-    },
-    computed: {
-      orderedStories: function () {
-        var order = this.order
-        return _.orderBy(this.stories, 'upvotes', [order])
-      }
+    ],
+    order: 'desc'
+  },
+  methods: {
+    reverseOrder: function () {
+      this.order = (this.order === 'desc') ? 'asc' : 'desc'
     }
-  })
+  },
+  computed: {
+    orderedStories: function () {
+      var order = this.order
+      return _.orderBy(this.stories, 'upvotes', [order])
+    }
+  }
+})
 </script>
 </html>

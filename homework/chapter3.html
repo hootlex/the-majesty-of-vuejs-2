@@ -1,37 +1,37 @@
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Greetings user</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Поприветствуйте пользователя</title>
 </head>
 <body>
 <div class="container">
-    <!-- the || is the logical operator OR -->
-    <div v-if="gender === 'male' || gender === 'female'">
-        <h1>Hello,
-            <!-- render span if 'gender' equals to 'male' -->
-            <span v-show="gender === 'male'">Mister {{name}}.</span>
-            <!-- render span if 'gender' equals to 'female' -->
-            <span v-if="gender === 'female'">Miss {{name}}.</span>
-        </h1>
-    </div>
-    <!-- v-else immediately follows v-if block to work -->
-    <h1 v-else>So you can't decide. Fine!</h1>
-    <!-- show inputs -->
-    <label for="gender">Enter your gender:</label>
-    <input v-model="gender" class="form-control" id="gender">
-    <label for="name">Enter your name:</label>
-    <input v-model="name" class="form-control" id="name">
-    <pre>{{ $data }}</pre>
+  <!-- || — логический оператор ИЛИ -->
+  <div v-if="gender === 'male' || gender === 'female'">
+    <h1>Привет,
+      <!-- отрисовка span, если 'gender' равняется 'male' -->
+      <span v-show="gender === 'male'">Мистер {{name}}.</span>
+      <!-- отрисовка span, если 'gender' равняется'female' -->
+      <span v-if="gender === 'female'">Мисс {{name}}.</span>
+    </h1>
+  </div>
+  <!-- v-else сразу следует за блоком v-if для его работы -->
+  <h1 v-else>Так, значит, ты не можешь решить. Отлично!</h1>
+  <!-- показать поля ввода -->
+  <label for="gender">Введите свой пол:</label>
+  <input v-model="gender" class="form-control" id="gender">
+  <label for="name">Введите ваше имя:</label>
+  <input v-model="name" class="form-control" id="name">
+  <pre>{{ $data }}</pre>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
-    new Vue({
-        el: '.container',
-        data: {
-            gender: 'female',
-            name: 'Universe',
-        },
-    })
+  new Vue({
+    el: '.container',
+    data: {
+      gender: 'female',
+      name: 'Вселенная',
+    },
+  })
 </script>
 </html>

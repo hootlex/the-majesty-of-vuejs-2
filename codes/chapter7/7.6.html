@@ -4,68 +4,68 @@
   <title>Привет, Vue</title>
 </head>
 <body>
-  <div id="app">
-    <div class="container">
-      <h1>Давайте послушаем несколько историй!</h1>
-      <ul class="list-group">
-        <story v-for="(story, index) in stories" :key="index" :story="story"></story>
-      </ul>
-      <pre>{{ $data }}</pre>
-    </div>
+<div id="app">
+  <div class="container">
+    <h1>Давайте послушаем несколько историй!</h1>
+    <ul class="list-group">
+      <story v-for="(story, index) in stories" :key="index" :story="story"></story>
+    </ul>
+    <pre>{{ $data }}</pre>
   </div>
-  <template id="story-template">
-    <li class="list-group-item">
-      {{ story.writer }} сказал "{{ story.plot }}".
-      Голосов за историю: {{ story.upvotes }}.
-      <button v-show="!story.voted" @click="upvote" class="btn btn-default">
-        Проголосовать
-      </button>
-    </li>
-  </template>
+</div>
+<template id="story-template">
+  <li class="list-group-item">
+    {{ story.writer }} сказал "{{ story.plot }}".
+    Голосов за историю: {{ story.upvotes }}.
+    <button v-show="!story.voted" @click="upvote" class="btn btn-default">
+      Проголосовать
+    </button>
+  </li>
+</template>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
-    template: '#story-template',
-    props: ['story'],
-    methods:{
-        upvote: function () {
-            this.story.upvotes += 1;
-            this.story.voted = true;
-        },
-    }
+  template: '#story-template',
+  props: ['story'],
+  methods: {
+    upvote: function () {
+      this.story.upvotes += 1;
+      this.story.voted = true;
+    },
+  }
 });
 
 new Vue({
-    el: '#app',
-    data: {
-        stories: [
-            {
-                plot: 'Моя лошадь потрясающая.',
-                writer: 'Мистер Уибл',
-                upvotes: 28,
-                voted: false,
-            },
-            {
-                plot: 'Нарвалы изобрели шашлык.',
-                writer: 'Мистер Уибл',
-                upvotes: 8,
-                voted: false,
-            },
-            {
-                plot: 'Тёмная сторона Силы сильнее.',
-                writer: 'Дарт Вейдер',
-                upvotes: 49,
-                voted: false,
-            },
-            {
-                plot: 'Просто так в Мордор не попадёшь',
-                writer: 'Боромир',
-                upvotes: 74,
-                voted: false,
-            },
-        ]
-    }
+  el: '#app',
+  data: {
+    stories: [
+      {
+        plot: 'Моя лошадь потрясающая.',
+        writer: 'Мистер Уибл',
+        upvotes: 28,
+        voted: false,
+      },
+      {
+        plot: 'Нарвалы изобрели шашлык.',
+        writer: 'Мистер Уибл',
+        upvotes: 8,
+        voted: false,
+      },
+      {
+        plot: 'Тёмная сторона Силы сильнее.',
+        writer: 'Дарт Вейдер',
+        upvotes: 49,
+        voted: false,
+      },
+      {
+        plot: 'Просто так в Мордор не попадёшь',
+        writer: 'Боромир',
+        upvotes: 74,
+        voted: false,
+      },
+    ]
+  }
 })
 </script>
 </html>

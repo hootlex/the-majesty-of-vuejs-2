@@ -18,18 +18,22 @@ export default {
 </script>
 
 <style>
-.fade-enter, .fade-leave-to{
-opacity: 0
+.fade-enter, .fade-leave-to {
+  opacity: 0
 }
+
 .fade-enter-active, .fade-leave-active {
-transition: opacity 1s
+  transition: opacity 1s
 }
+
 .fade-enter-to, .fade-leave {
-opacity: 0.8
+  opacity: 0.8
 }
+
 .router-link-active {
   color: green;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

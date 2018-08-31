@@ -1,24 +1,24 @@
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Привет, Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Привет, Vue</title>
 </head>
 <body>
-    <div class="container">
-        <story></story>
-    </div>
+<div class="container">
+  <story></story>
+</div>
 </body>
 <template id="story-template">
-    <h1>Моя лошадь потрясающая!</h1>
+  <h1>Моя лошадь потрясающая!</h1>
 </template>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
-    template: '#story-template'
+  template: '#story-template'
 });
 
 new Vue({
-    el: '.container'
+  el: '.container'
 })
 </script>
 </html>

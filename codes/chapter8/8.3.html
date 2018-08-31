@@ -4,21 +4,21 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container text-center">
-    <p style="font-size: 140px;">
-      {{ votes }}
-    </p>
+<div class="container text-center">
+  <p style="font-size: 140px;">
+    {{ votes }}
+  </p>
 
-    <div class="row">
-      <food @voted="countVote" name="Чизбургер"></food>
-      <food @voted="countVote" name="Бургер с двойным беконом"></food>
-      <food @voted="countVote" name="Rodeo Burger"></food>
-    </div>
-    <h1>Журнал:</h1>
-    <ul class="list-group">
-      <li class="list-group-item" v-for="(vote, index) in log" :key="index">{{ vote }}</li>
-    </ul>
+  <div class="row">
+    <food @voted="countVote" name="Чизбургер"></food>
+    <food @voted="countVote" name="Бургер с двойным беконом"></food>
+    <food @voted="countVote" name="Родео Бургер"></food>
   </div>
+  <h1>Журнал:</h1>
+  <ul class="list-group">
+    <li class="list-group-item" v-for="(vote, index) in log" :key="index">{{ vote }}</li>
+  </ul>
+</div>
 </body>
 <template id="food">
   <div class="text-center col-lg-4">
@@ -39,10 +39,10 @@ Vue.component('food', {
     }
   },
   methods: {
-      vote: function (event) {
-          this.votes++
-          this.$emit('voted', event.srcElement.textContent)
-      }
+    vote: function (event) {
+      this.votes++
+      this.$emit('voted', event.srcElement.textContent)
+    }
   }
 })
 new Vue({
@@ -52,12 +52,12 @@ new Vue({
     log: []
   },
   methods:
-  {
-    countVote: function (food) {
-      this.votes++
-      this.log.push(food + ' получил голос.')
+    {
+      countVote: function (food) {
+        this.votes++
+        this.log.push(food + ' получил голос.')
+      }
     }
-  }
 })
 </script>
 </html>

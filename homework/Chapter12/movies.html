@@ -2,69 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Movies</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Фильмы</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 
 <body>
 <main>
-    <div class="container">
-        <h1>Movies</h1>
-        <div id="v-app">
-            <table class="table table-striped">
-                <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Director</th>
-                    <th>Действия</th>
-                </tr>
-                <tr v-for="movie in movies" :key="movie.id" is="movie" :movie="movie"></tr>
-            </table>
-            <p class="lead">Here's a list of all your movies.
-                <button @click="createMovie()" class="btn btn-primary">Добавить новую историю?</button>
-            </p>
-        </div>
+  <div class="container">
+    <h1>Фильмы</h1>
+    <div id="v-app">
+      <table class="table table-striped">
+        <tr>
+          <th>#</th>
+          <th>Название</th>
+          <th>Режиссер</th>
+          <th>Действия</th>
+        </tr>
+        <tr v-for="movie in movies" :key="movie.id" is="movie" :movie="movie"></tr>
+      </table>
+      <p class="lead">Here's a list of all your movies.
+        <button @click="createMovie()" class="btn btn-primary">Добавить новый фильм?</button>
+      </p>
     </div>
+  </div>
 </main>
 <template id="template-movie-raw">
-    <tr>
-        <td>
-            {{movie.id}}
-        </td>
-        <td class="col-md-6">
-            <input v-if="movie.editing" v-model="movie.title" class="form-control">
-            <!--in other occasions show the movie title-->
-            <span v-else>
-                {{movie.title}}
-            </span>
-        </td>
-        <td>
-            <input v-if="movie.editing" v-model="movie.director" class="form-control">
-            <!--in other occasions show the movie director-->
-            <span v-else>
-                {{movie.director}}
-            </span>
-        </td>
-        <td>
-            <div class="btn-group" v-if="!movie.editing">
-                <button @click="editMovie(movie)" class="btn btn-default">Редактировать</button>
-                <button @click="deleteMovie(movie)" class="btn btn-danger">Удалить</button>
-            </div>
-            <div class="btn-group" v-else>
-                <!--If the movie is taken from the db then it will have an id-->
-                <button v-if="movie.id" class="btn btn-primary" @click="updateMovie(movie)">Update Movie</button>
-                <!--If the movie is new we want to store it-->
-                <button v-else class="btn btn-success" @click="storeMovie(movie)">Save New Movie</button>
-                <!-- Всегда показывать кнопку отмены -->
-                <button @click="movie.editing=false" class="btn btn-default">Отмена</button>
-            </div>
-        </td>
-    </tr>
+  <tr>
+    <td>
+      {{movie.id}}
+    </td>
+    <td class="col-md-6">
+      <input v-if="movie.editing" v-model="movie.title" class="form-control">
+      <!-- в остальных случаях показываем название фильма -->
+      <span v-else>
+        {{movie.title}}
+      </span>
+    </td>
+    <td>
+      <input v-if="movie.editing" v-model="movie.director" class="form-control">
+      <!-- в остальных случаях показываем режиссера фильма -->
+      <span v-else>
+        {{movie.director}}
+      </span>
+    </td>
+    <td>
+      <div class="btn-group" v-if="!movie.editing">
+        <button @click="editMovie(movie)" class="btn btn-default">Редактировать</button>
+        <button @click="deleteMovie(movie)" class="btn btn-danger">Удалить</button>
+      </div>
+      <div class="btn-group" v-else>
+        <!-- Если фильм получена с базы данных, он имеет идентификатор -->
+        <button v-if="movie.id" class="btn btn-primary" @click="updateMovie(movie)">Update Movie</button>
+        <!-- Если фильм новый, значит мы хотим сохранить его -->
+        <button v-else class="btn btn-success" @click="storeMovie(movie)">Save New Movie</button>
+        <!-- Всегда показывать кнопку отмены -->
+        <button @click="movie.editing=false" class="btn btn-default">Отмена</button>
+      </div>
+    </td>
+  </tr>
 </template>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.js"></script>
-<script src='js/app.js'></script>
+<script src="js/app.js"></script>
 </body>
 </html>

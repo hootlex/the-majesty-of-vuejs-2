@@ -4,12 +4,12 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container text-center">
-    <p style="font-size: 140px;">
-      {{ votes }}
-    </p>
-    <button class="btn btn-primary" @click="vote">Голосоввать</button>
-  </div>
+<div class="container text-center">
+  <p style="font-size: 140px;">
+    {{ votes }}
+  </p>
+  <button class="btn btn-primary" @click="vote">Голосовать</button>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
@@ -19,13 +19,13 @@ new Vue({
     votes: 0
   },
   methods:
-  {
-    vote: function (writer) {
-      this.$emit('voted')
+    {
+      vote: function (writer) {
+        this.$emit('voted')
+      },
     },
-  },
-  created () {
-    this.$on('voted', function(button) {
+  created() {
+    this.$on('voted', function (button) {
       this.votes++
     })
   }

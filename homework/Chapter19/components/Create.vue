@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
-    <h1>Add a new pokemon!</h1>
+    <h1>Добавить нового покемона!</h1>
     <input v-model="newPokemon.name" class="form-control">
     <br>
     <button class="btn btn-lg btn-danger" @click="cancel">Отмена</button>
-    <button class="btn btn-lg btn-warning" @click="add">Add</button>
+    <button class="btn btn-lg btn-warning" @click="add">Добавить</button>
   </div>
 </template>
 

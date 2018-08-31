@@ -1,34 +1,34 @@
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Газета Готэма</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Газета Готэма</title>
 </head>
 <body>
-    <div class="container">
-    <h1>Настоящие имена супергероев!</h1>
-    <ul class="list-group">
-        <li v-for="(hero, index) in heroes" :key="index" class="list-group-item">
-            {{hero | snitch}}
-        </li>
-    </ul>
-    </div>
+<div class="container">
+  <h1>Настоящие имена супергероев!</h1>
+  <ul class="list-group">
+    <li v-for="(hero, index) in heroes" :key="index" class="list-group-item">
+      {{hero | snitch}}
+    </li>
+  </ul>
+</div>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.filter('snitch', function (heroes) {
-  return heroes.isObvioulsy + ' — это ' + heroes.firstname + ' ' + heroes.lastname + ' в реальной жизни!'
+  return heroes.secretId + ' — это ' + heroes.firstname + ' ' + heroes.lastname + ' в реальной жизни!'
 })
 
 new Vue({
-    el: '.container',
-    data: {
-       heroes:  [
-           { firstname: 'Брюс', lastname: 'Уэйн', secretId: 'Бэтмен' },
-           { firstname: 'Кларк', lastname: 'Кент', secretId: 'Супермен' },
-           { firstname: 'Джей', lastname: 'Гаррик', secretId: 'Флэш' },
-           { firstname: 'Питер', lastname: 'Паркер', secretId: 'Человек-паук' }
-      ]
-    }
+  el: '.container',
+  data: {
+    heroes: [
+      {firstname: 'Брюс', lastname: 'Уэйн', secretId: 'Бэтмен'},
+      {firstname: 'Кларк', lastname: 'Кент', secretId: 'Супермен'},
+      {firstname: 'Джей', lastname: 'Гаррик', secretId: 'Флэш'},
+      {firstname: 'Питер', lastname: 'Паркер', secretId: 'Человек-паук'}
+    ]
+  }
 })
 </script>
 </html>

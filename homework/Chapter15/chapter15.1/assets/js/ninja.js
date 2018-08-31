@@ -1,26 +1,29 @@
-'use strict';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+"use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Ninja = function () {
-    function Ninja(name) {
-        _classCallCheck(this, Ninja);
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-        this.name = name;
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Ninja =
+/*#__PURE__*/
+function () {
+  function Ninja(name) {
+    _classCallCheck(this, Ninja);
+
+    this.name = name;
+  }
+
+  _createClass(Ninja, [{
+    key: "announce",
+    value: function announce() {
+      alert("\u041D\u0438\u043D\u0434\u0437\u044F ".concat(this.name, " \u0437\u0434\u0435\u0441\u044C!")); // эквивалентно этому:
+      // alert('Черепашка-ниндзя ' + this.name + ' здесь!')
     }
+  }]);
 
-    _createClass(Ninja, [{
-        key: 'announce',
-        value: function announce() {
-            return 'Ninja ' + this.name + ' is here!';
-            // equivalent to:
-            // return 'Ninja turtle ' + this.name + ' is here!';
-        }
-    }]);
-
-    return Ninja;
+  return Ninja;
 }();
 
-alert(new Ninja('Leonardo').announce());
+new Ninja('Леонардо').announce();

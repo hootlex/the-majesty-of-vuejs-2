@@ -8,7 +8,9 @@
             <span class="badge">{{ story.upvotes }}</span>
           </h4>
 
-          <router-link :to="{ name: 'stories.edit', params: { id: story.id }}" tag="button" class="btn btn-default" exact>Редактировать</router-link>
+          <router-link :to="{ name: 'stories.edit', params: { id: story.id }}" tag="button" class="btn btn-default"
+                       exact>Редактировать
+          </router-link>
         </div>
       </li>
     </ul>
@@ -19,12 +21,12 @@
 import {store} from '../store.js'
 
 export default {
-  data () {
+  data() {
     return {
       stories: store.stories
     }
   },
-  mounted () {
+  mounted() {
     console.log('истории')
   }
 }

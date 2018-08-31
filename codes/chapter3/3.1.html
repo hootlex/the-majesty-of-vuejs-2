@@ -1,25 +1,25 @@
 <html>
 <head>
-    <title>Привет, Vue</title>
+  <title>Привет, Vue</title>
 </head>
 <body>
 <div id="app" style="text-align:center;">
-    <h1>Вы должны написать сообщение для получения помощи!</h1>
-    <textarea v-model="message"></textarea>
-    <br>
-    <button v-show="message">
-        Отправить послание всем союзникам для помощи!
-    </button>
-    <pre>{{ $data }}</pre>
+  <h1>Вы должны написать сообщение для получения помощи!</h1>
+  <textarea v-model="message"></textarea>
+  <br>
+  <button v-show="message">
+    Отправить послание всем союзникам для помощи!
+  </button>
+  <pre>{{ $data }}</pre>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script>
-    new Vue({
-        el: '#app',
-        data: {
-             message: 'Наш король мёртв! Пришлите подмогу!'
-        }
-    })
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Наш король мёртв! Пришлите подмогу!'
+  }
+})
 </script>
 </html>

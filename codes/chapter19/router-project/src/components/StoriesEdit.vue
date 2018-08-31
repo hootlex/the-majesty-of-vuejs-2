@@ -1,19 +1,19 @@
 <template>
   <div>
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <h3>Редактирование</h3>
-          <form>
-            <div class="form-group col-md-offset-2 col-md-8">
-              <input class="form-control" v-model="story.plot">
-            </div>
-            <div class="form-group col-md-12">
-              <button @click="saveChanges(story)" class="btn btn-success">Сохранить изменения</button>
-              <button @click="goBack" class="btn btn-default">Вернуться назад</button>
-            </div>
-          </form>
-        </div>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <h3>Редактирование</h3>
+        <form>
+          <div class="form-group col-md-offset-2 col-md-8">
+            <input class="form-control" v-model="story.plot">
+          </div>
+          <div class="form-group col-md-12">
+            <button @click="saveChanges(story)" class="btn btn-success">Сохранить изменения</button>
+            <button @click="goBack" class="btn btn-default">Вернуться назад</button>
+          </div>
+        </form>
       </div>
+    </div>
   </div>
 </template>
 

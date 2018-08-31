@@ -4,26 +4,26 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container text-center">
-    <h1>Битва между продуктами</h1>
-    <p style="font-size: 140px;">
-      {{ votes.count }}
-    </p>
-    <button class="btn btn-danger" @click="reset">Сбросить голоса</button>
-    <hr>
+<div class="container text-center">
+  <h1>Битва между продуктами</h1>
+  <p style="font-size: 140px;">
+    {{ votes.count }}
+  </p>
+  <button class="btn btn-danger" @click="reset">Сбросить голоса</button>
+  <hr>
 
-    <div class="row">
-      <food name="Чизбургер"></food>
-      <food name="Бургер с двойным беконом"></food>
-      <food name="Воппер"></food>
-    </div>
-    <hr>
-
-    <h1>Журнал:</h1>
-    <ul class="list-group">
-      <li class="list-group-item" v-for="(vote, index) in votes.log" :key="index"> {{ vote }} </li>
-    </ul>
+  <div class="row">
+    <food name="Чизбургер"></food>
+    <food name="Бургер с двойным беконом"></food>
+    <food name="Воппер"></food>
   </div>
+  <hr>
+
+  <h1>Журнал:</h1>
+  <ul class="list-group">
+    <li class="list-group-item" v-for="(vote, index) in votes.log" :key="index"> {{ vote }}</li>
+  </ul>
+</div>
 </body>
 <template id="food">
   <div class="text-center col-lg-4">
@@ -57,7 +57,7 @@ Vue.component('food', {
       this.votes = 0
     }
   },
-  created () {
+  created() {
     bus.$on('reset', this.reset)
   }
 })
@@ -70,20 +70,20 @@ new Vue({
     }
   },
   methods:
-  {
-    countVote: function (food) {
-      this.votes.count++
-      this.votes.log.push(food + ' получил голос.')
-    },
-    reset: function () {
-      this.votes = {
-        count: 0,
-        log: []
+    {
+      countVote: function (food) {
+        this.votes.count++
+        this.votes.log.push(food + ' получил голос.')
+      },
+      reset: function () {
+        this.votes = {
+          count: 0,
+          log: []
+        }
+        bus.$emit('reset')
       }
-      bus.$emit('reset')
-    }
-  },
-  created () {
+    },
+  created() {
     bus.$on('voted', this.countVote)
   }
 })

@@ -1,44 +1,44 @@
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<title>Привет, Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Привет, Vue</title>
 </head>
 <body class="container-fluid">
-  <div id="app">
-    <ul>
-        <li :class="{'completed' : task.done}" :style="styleObject" v-for="(task, index) in tasks" :key="index">
-            {{task.body}}
-        <button @click="completeTask(task)" class="btn">
-            Просто сделай это!
-        </button>
-        </li>
-    </ul>
-  </div>
+<div id="app">
+  <ul>
+    <li :class="{'completed' : task.done}" :style="styleObject" v-for="(task, index) in tasks" :key="index">
+      {{task.body}}
+      <button @click="completeTask(task)" class="btn btn-success">
+        Просто сделай это!
+      </button>
+    </li>
+  </ul>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
-    el: '#app',
-    data: {
-        tasks: [
-                { body: 'Покормить лошадей', done: true },
-                { body: 'Помыть броню', done: true },
-                { body: 'Поточить меч', done: false },
-            ],
-        styleObject: {
-             fontSize: '25px'
-            }
-    },
-    methods: {
-        completeTask: function(task) {
-            task.done = !task.done;
-        }
-    },
+  el: '#app',
+  data: {
+    tasks: [
+      {body: 'Покормить лошадей', done: true},
+      {body: 'Помыть броню', done: true},
+      {body: 'Поточить меч', done: false},
+    ],
+    styleObject: {
+      fontSize: '25px'
+    }
+  },
+  methods: {
+    completeTask: function (task) {
+      task.done = !task.done;
+    }
+  },
 });
 </script>
 <style type="text/css">
-    .completed {
-        text-decoration: line-through;
-    }
+.completed {
+  text-decoration: line-through;
+}
 </style>
 </html>

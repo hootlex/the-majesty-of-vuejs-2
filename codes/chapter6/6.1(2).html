@@ -4,37 +4,35 @@
   <title>Истории пользователей</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Давайте послушаем несколько историй!</h1>
-    <div>
-      <h3>Истории Алекса</h3>
-      <ul class="list-group">
-        <li v-for="(story, index) in storiesBy('Alex')" :key="index" class="list-group-item">
+<div class="container">
+  <h1>Давайте послушаем несколько историй!</h1>
+  <div>
+    <h3>Истории Алекса</h3>
+    <ul class="list-group">
+      <li v-for="(story, index) in storiesBy('Алекс')" :key="index" class="list-group-item">
         {{ story.writer }} сказал "{{ story.plot }}"
       </li>
     </ul>
     <h3>Истории Джона</h3>
     <ul class="list-group">
-      <li v-for="(story, index) in storiesBy('John')" :key="index" class="list-group-item">
+      <li v-for="(story, index) in storiesBy('Джон')" :key="index" class="list-group-item">
+        {{ story.writer }} сказал "{{ story.plot }}"
+      </li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <label for="query">
+      Что вы ищите?
+    </label>
+    <input v-model="query" id="query" class="form-control">
+  </div>
+  <h3>Результаты поиска:</h3>
+  <ul class="list-group">
+    <li v-for="(story, index) in search" :key="index" class="list-group-item">
       {{ story.writer }} сказал "{{ story.plot }}"
     </li>
   </ul>
-</div>
-<div class="form-group">
-  <label for="query">
-    Что вы ищите?
-  </label>
-  <input v-model="query" id="query" class="form-control">
-</div>
-<h3>Результаты поиска:</h3>
-<ul class="list-group">
-  <li v-for="(story, index) in search" :key="index" class="list-group-item">
-  {{ story.writer }} сказал "{{ story.plot }}"
-</li>
-</ul>
-<pre>
-  {{ $data }}
-</pre>
+  <pre>{{ $data }}</pre>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
@@ -62,7 +60,7 @@ new Vue({
     ],
     query: ' '
   },
-  methods:{
+  methods: {
     storiesBy: function (writer) {
       return this.stories.filter(function (story) {
         return story.writer === writer

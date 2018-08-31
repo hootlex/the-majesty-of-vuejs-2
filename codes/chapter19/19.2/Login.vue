@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-md-offset-2 col-md-8">
-      <h2>Sign In</h2>
+      <h2>Вход</h2>
       <form class="form-inline">
         <div class="form-group">
           <input class="form-control" placeholder="Электронная почта">

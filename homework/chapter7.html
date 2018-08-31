@@ -2,12 +2,12 @@
 <head>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <title>Planet Travels</title>
+  <title>Путешествия по планетам</title>
 </head>
 <body>
   <div id="app">
     <div class="container">
-      <h1>Where would like to go?</h1>
+      <h1>Куда бы вы хотели полететь?</h1>
       <ul class="list-group">
         <planet v-for="(planet, index) in planets" :key="index" :planet="planet"></planet>
     </ul>
@@ -15,10 +15,10 @@
 </div>
 <template id="planet-template">
   <li  class="list-group-item">
-    Planet: {{ planet.name }}
-    Visited {{ planet.visits }} time(s).
+    Планета: {{ planet.name }}
+    Кол-во посещений: {{ planet.visits }}.
     <button v-show="canBeVisited" @click="visit" class="btn btn-default">
-      Visit
+      Посетить
     </button>
     <span v-show="planet.visits > 0" class="fa fa-rocket fa-2x pull-right" aria-hidden="true">
 </span>
@@ -47,19 +47,19 @@ new Vue({
   data: {
     planets: [
       {
-        name: 'Mercury',
+        name: 'Меркурий',
         visits: 0
       },
       {
-        name: 'Venus',
+        name: 'Венера',
         visits: 0
       },
       {
-        name: 'Mars',
+        name: 'Марс',
         visits: 0
       },
       {
-        name: 'Jupiter',
+        name: 'Юпитер',
         visits: 0
       }
     ]

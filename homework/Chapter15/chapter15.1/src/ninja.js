@@ -1,15 +1,14 @@
 class Ninja {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    announce() {
-        alert(`Ninja ${this.name} is here!`)
+  announce() {
+    alert(`Ниндзя ${this.name} здесь!`)
 
-        // equivalent to:
-        // alert('Ninja turtle ' + this.name + ' is here!')
-    }
+    // эквивалентно этому:
+    // alert('Черепашка-ниндзя ' + this.name + ' здесь!')
+  }
 }
 
-new Ninja('Leonardo').announce();
-
+new Ninja('Леонардо').announce();

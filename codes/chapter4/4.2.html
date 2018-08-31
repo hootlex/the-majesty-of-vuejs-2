@@ -1,22 +1,22 @@
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Привет, Vue</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Привет, Vue</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Таблица умножения на 4</h1>
-        <ul class="list-group">
-            <li v-for="i in 11" class="list-group-item">
-                {{ i }} умножить на 4 равно {{ i * 4 }}.
-            </li>
-        </ul>
-    </div>
+<div class="container">
+  <h1>Таблица умножения на 4</h1>
+  <ul class="list-group">
+    <li v-for="i in 11" class="list-group-item">
+      {{ i }} умножить на 4 равно {{ i * 4 }}.
+    </li>
+  </ul>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
-    new Vue({
-        el: '.container'
-    })
+new Vue({
+  el: '.container'
+})
 </script>
 </html>

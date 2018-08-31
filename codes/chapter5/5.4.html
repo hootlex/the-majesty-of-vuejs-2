@@ -4,26 +4,24 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Введите 2 числа для вычисления их суммы.</h1>
-    <form class="form-inline">
-      <!-- Обратите внимание, специальный атрибут 'number'
-      передается для разбора входных данных как числа. -->
-      <input v-model.number="a"  class="form-control">
-      <select v-model="operator" class="form-control">
-        <option>+</option>
-        <option>-</option>
-        <option>*</option>
-        <option>/</option>
-      </select>
-      <!-- Обратите внимание, специальный атрибут 'number'
-      передается для разбора входных данных как числа. -->
-      <input v-model.number="b" class="form-control">
+<div class="container">
+  <h1>Введите 2 числа и выберите операцию.</h1>
+  <form class="form-inline">
+    <!-- Обратите внимание, специальный атрибут 'number'
+    передается для разбора входных данных как числа. -->
+    <input v-model.number="a" class="form-control">
+    <select v-model="operator" class="form-control">
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+    </select>
+    <!-- Обратите внимание, специальный атрибут 'number'
+    передается для разбора входных данных как числа. -->
+    <input v-model.number="b" class="form-control">
   </form>
-  <h2>Результат: {{a}}  {{operator}}  {{b}} = {{c}}</h2>
-  <pre>
-    {{ $data }}
-  </pre>
+  <h2>Результат: {{a}} {{operator}} {{b}} = {{c}}</h2>
+  <pre>{{ $data }}</pre>
 </div>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>

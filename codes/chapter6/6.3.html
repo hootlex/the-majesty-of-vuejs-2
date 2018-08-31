@@ -1,15 +1,15 @@
 <html>
 <head>
-  <title>Калькулятор</title>
+  <title>Истории пользователей</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Let's hear some famous stories! ({{famous.length}})</h1>
-    <ul class="list-group">
-      <li v-for="(story, index) in famous" :key="index" class="list-group-item">
-        {{ story.writer }} сказал "{{ story.plot }}"
-        и получил {{ story.upvotes }} голосов.
+<div class="container">
+  <h1>Давайте послушаем известные истории! ({{famous.length}})</h1>
+  <ul class="list-group">
+    <li v-for="(story, index) in famous" :key="index" class="list-group-item">
+      {{ story.writer }} сказал "{{ story.plot }}"
+      и получил {{ story.upvotes }} голосов.
     </li>
   </ul>
 </div>

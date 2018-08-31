@@ -1,47 +1,45 @@
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Истории</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Истории</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Давайте послушаем несколько историй!</h1>
-        <div>
-          <ul class="list-group">
-              <li v-for="(story, index) in stories" :key="index" class="list-group-item">
-                  {{index}} {{ story.writer }} сказал "{{ story.plot }}"
-              </li>
-          </ul>
-        </div>
-        <pre>
-            {{ $data }}
-        </pre>
-    </div>
+<div class="container">
+  <h1>Давайте послушаем несколько историй!</h1>
+  <div>
+    <ul class="list-group">
+      <li v-for="(story, index) in stories" :key="index" class="list-group-item">
+        {{index}}. {{ story.writer }} сказал "{{ story.plot }}"
+      </li>
+    </ul>
+  </div>
+  <pre>{{ $data }}</pre>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
-    el: '.container',
-    data: {
-        stories: [
-            {
-                plot: 'Сегодня я разбил машину!',
-                writer: 'Алекс'
-            },
-            {
-                plot: 'Вчера кто-то украл мою сумку!',
-                writer: 'Джон'
-            },
-            {
-                plot: 'Кто-то съел мой шоколад...',
-                writer: 'Джон'
-            },
-            {
-                plot: 'Я съел чей-то шоколад!',
-                writer: 'Алекс'
-            },
-        ]
-    }
+  el: '.container',
+  data: {
+    stories: [
+      {
+        plot: 'Сегодня я разбил машину!',
+        writer: 'Алекс'
+      },
+      {
+        plot: 'Вчера кто-то украл мою сумку!',
+        writer: 'Джон'
+      },
+      {
+        plot: 'Кто-то съел мой шоколад...',
+        writer: 'Джон'
+      },
+      {
+        plot: 'Я съел чей-то шоколад!',
+        writer: 'Алекс'
+      },
+    ]
+  }
 })
 </script>
 </html>

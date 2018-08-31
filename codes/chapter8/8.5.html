@@ -4,16 +4,17 @@
   <title>Привет, Vue</title>
 </head>
 <body>
-  <div id="app">
-    <div class="container">
-      <h1>Давайте послушаем несколько историй!</h1>
-      <ul class="list-group">
-        <story v-for="(story, index) in stories"
-          :key="index"
-          :story="story"
-          :favorite="favorite"
-          @update="updateFavorite">
-        </story>
+<div id="app">
+  <div class="container">
+    <h1>Давайте послушаем несколько историй!</h1>
+    <ul class="list-group">
+      <story v-for="(story, index) in stories"
+             :key="index"
+             :story="story"
+             :favorite="favorite"
+             @update="updateFavorite"
+      >
+      </story>
     </ul>
     <pre>
       {{ $data }}
@@ -29,8 +30,8 @@
     </button>
     <button v-show="!isFavorite" @click="markAsFavorite" class="btn btn-primary">
       Добавить в избранное
-  </button>
-  <span v-show="isFavorite" class="glyphicon glyphicon-star pull-right" aria-hidden="true"></span>
+    </button>
+    <span v-show="isFavorite" class="glyphicon glyphicon-star pull-right" aria-hidden="true"></span>
   </li>
 </template>
 </body>
@@ -39,7 +40,7 @@
 Vue.component('story', {
   template: '#story-template',
   props: ['story', 'favorite'],
-  methods:{
+  methods: {
     upvote: function () {
       this.story.upvotes += 1;
       this.story.voted = true;
@@ -50,7 +51,7 @@ Vue.component('story', {
       this.$emit('update', this.story)
     },
   },
-  computed:{
+  computed: {
     isFavorite: function () {
       return this.story === this.favorite;
     },
@@ -88,11 +89,11 @@ new Vue({
     ],
     favorite: {}
   },
-  methods:{
-      updateFavorite: function (story) {
-        this.favorite = story;
-      },
+  methods: {
+    updateFavorite: function (story) {
+      this.favorite = story;
     },
+  },
 })
 </script>
 </html>

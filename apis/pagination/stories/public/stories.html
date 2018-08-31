@@ -2,79 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Истории</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Истории</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 
 <body>
 <main>
-    <div class="container">
-        <h1>Истории</h1>
-        <div id="v-app">
-            <div class="pagination">
-                <button class="btn btn-default" @click="fetchStories(pagination.prev_page_url)" :disabled="!pagination.prev_page_url">
-                    Предыдущая страница
-                </button>
-                <span>Страница {{pagination.current_page}} из {{pagination.last_page}}</span>
-                <button class="btn btn-default" @click="fetchStories(pagination.next_page_url)" :disabled="!pagination.next_page_url">Следующая страница
-                </button>
-            </div>
-            <table class="table table-striped">
-                <tr>
-                    <th>#</th>
-                    <th>Сюжет</th>
-                    <th>Автор</th>
-                    <th>Кол-во голосов</th>
-                    <th>Действия</th>
-                </tr>
-                <tr v-for="story in stories" :key="story.id" is="story" :story="story"></tr>
-            </table>
-            <p class="lead">Вот список всех ваших историй.
-                <button @click="createStory()" class="btn btn-primary">Добавить новую историю?</button>
-            </p>
-            <pre>{{ $data }}</pre>
-        </div>
+  <div class="container">
+    <h1>Истории</h1>
+    <div id="v-app">
+      <div class="pagination">
+        <button class="btn btn-default" @click="fetchStories(pagination.prev_page_url)"
+                :disabled="!pagination.prev_page_url">
+          Предыдущая страница
+        </button>
+        <span>Страница {{pagination.current_page}} из {{pagination.last_page}}</span>
+        <button class="btn btn-default" @click="fetchStories(pagination.next_page_url)"
+                :disabled="!pagination.next_page_url">Следующая страница
+        </button>
+      </div>
+      <table class="table table-striped">
+        <tr>
+          <th>#</th>
+          <th>Сюжет</th>
+          <th>Автор</th>
+          <th>Кол-во голосов</th>
+          <th>Действия</th>
+        </tr>
+        <tr v-for="story in stories" :key="story.id" is="story" :story="story"></tr>
+      </table>
+      <p class="lead">Вот список всех ваших историй.
+        <button @click="createStory()" class="btn btn-primary">Добавить новую историю?</button>
+      </p>
+      <pre>{{ $data }}</pre>
     </div>
+  </div>
 </main>
 
 <template id="template-story-raw">
-    <tr>
-        <td>
-            {{story.id}}
-        </td>
-        <td class="col-md-6">
-            <!-- если история редактируется, показываем поле ввода для сюжета -->
-            <input v-if="story.editing" v-model="story.plot" class="form-control" />
-            <!-- в остальных случаях показываем сюжет истории -->
-            <span v-else>{{story.plot}}</span>
-        </td>
-        <td>
-            <!-- если история редактируется, показываем поле ввода для автора -->
-            <input v-if="story.editing" v-model="story.writer" class="form-control"></input>
-            <!-- в остальных случаях показываем автора истории -->
-            <span v-else>{{story.writer}}</span>
-        </td>
-        <td>
-            {{story.upvotes}}
-        </td>
-        <td>
-            <div class="btn-group" v-if="!story.editing">
-                <button @click="upvoteStory(story)" class="btn btn-primary">Проголосовать</button>
-                <button @click="editStory(story)" class="btn btn-default">Редактировать</button>
-                <button @click="deleteStory(story)" class="btn btn-danger">Удалить</button>
-            </div>
-            <div class="btn-group" v-else>
-                <!-- Если история получена с базы данных, она имеет идентификатор -->
-                <button v-if="story.id" class="btn btn-primary" @click="updateStory(story)">Обновить историю</button>
-                <!-- Если история новая, значит мы хотим сохранить её -->
-                <button v-else class="btn btn-success" @click="storeStory(story)">Сохранить историю</button>
-                <!-- Всегда показывать кнопку отмены -->
-                <button @click="story.editing=false" class="btn btn-default">Отмена</button>
-            </div>
-        </td>
-    </tr>
+  <tr>
+    <td>
+      {{story.id}}
+    </td>
+    <td class="col-md-6">
+      <!-- если история редактируется, показываем поле ввода для сюжета -->
+      <input v-if="story.editing" v-model="story.plot" class="form-control"/>
+      <!-- в остальных случаях показываем сюжет истории -->
+      <span v-else>{{story.plot}}</span>
+    </td>
+    <td>
+      <!-- если история редактируется, показываем поле ввода для автора -->
+      <input v-if="story.editing" v-model="story.writer" class="form-control"></input>
+      <!-- в остальных случаях показываем автора истории -->
+      <span v-else>{{story.writer}}</span>
+    </td>
+    <td>
+      {{story.upvotes}}
+    </td>
+    <td>
+      <div class="btn-group" v-if="!story.editing">
+        <button @click="upvoteStory(story)" class="btn btn-primary">Проголосовать</button>
+        <button @click="editStory(story)" class="btn btn-default">Редактировать</button>
+        <button @click="deleteStory(story)" class="btn btn-danger">Удалить</button>
+      </div>
+      <div class="btn-group" v-else>
+        <!-- Если история получена с базы данных, она имеет идентификатор -->
+        <button v-if="story.id" class="btn btn-primary" @click="updateStory(story)">Обновить историю</button>
+        <!-- Если история новая, значит мы хотим сохранить её -->
+        <button v-else class="btn btn-success" @click="storeStory(story)">Сохранить историю</button>
+        <!-- Всегда показывать кнопку отмены -->
+        <button @click="story.editing=false" class="btn btn-default">Отмена</button>
+      </div>
+    </td>
+  </tr>
 </template>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>

@@ -1,53 +1,54 @@
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>People of Gaul</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Люди Галлии</title>
 </head>
 <body>
-    <div class="container">
-        <h1>People of Gaul</h1>
-        <ul class="list-group">
-            <!-- render filtered array items using 'v-for' -->
-            <li v-for="(person, index) in orderedPeople()" :key="index" class="list-group-item">
-                {{person.name}} {{person.age}}
-            </li>
-        </ul>
-        <h1>"Old" People of Gaul</h1>
-        <ul class="list-group">
-            <!-- render filtered array items -->
-            <li v-for="(person, index) in old" :key="index" class="list-group-item">
-                {{person.name}} {{person.age}}
-            </li>
-        </ul>
-        <pre>{{ $data }}</pre>
-    </div>
+<div class="container">
+  <h1>Люди Галлии</h1>
+  <ul class="list-group">
+    <!-- отрисовка отфильтрованного массива элементов, используя 'v-for' -->
+    <li v-for="(person, index) in orderedPeople()" :key="index" class="list-group-item">
+      {{person.name}} {{person.age}}
+    </li>
+  </ul>
+  <h1>"Старые" люди Галлии</h1>
+  <ul class="list-group">
+    <!-- отрисовка отфильтрованного массива элементов -->
+    <li v-for="(person, index) in old" :key="index" class="list-group-item">
+      {{person.name}} {{person.age}}
+    </li>
+  </ul>
+  <pre>{{ $data }}</pre>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js"></script>
 <script type="text/javascript">
-    new Vue({
-        el: '.container',
-        data: {
-            people: [
-              {name: "Obelix", age: 33},
-              {name: "Asterix", age: 32},
-              {name: "Majestix", age: 82},
-              {name: "Methusalix", age: 103},
-              {name: "Julius Caesar", age: 66},
-            ]
-        },
-        methods: {
-          orderedPeople: function () {
-            return _.orderBy(this.people, 'age')
-        }
+  new Vue({
+    el: '.container',
+    data: {
+      people: [
+        {name: 'Обеликс', age: 33},
+        {name: 'Астерикс', age: 32},
+        {name: 'Маджестикс', age: 82},
+        {name: 'Ветераникс', age: 103},
+        {name: 'Юлий Цезарь', age: 66},
+        {name: 'Юлий Цезарь', age: 66},
+      ]
+    },
+    methods: {
+      orderedPeople: function () {
+        return _.orderBy(this.people, 'age')
+      }
     },
     computed: {
-        old: function() {
-          return this.people.filter(function (item) {
-              return item.age > 65;
-          });
+      old: function () {
+        return this.people.filter(function (item) {
+          return item.age > 65;
+        });
       }
-  }
-})
+    }
+  })
 </script>
 </html>

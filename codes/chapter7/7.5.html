@@ -1,41 +1,41 @@
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>Потрясающие истории</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Потрясающие истории</title>
 </head>
 <body>
-  <div class="container">
-      <h1>Давайте послушаем несколько историй!</h1>
-      <div>
-          <h3>Истории Алекса</h3>
-          <ul class="list-group">
-              <story v-for="(story, index) in storiesBy('Alex')" :key="index" :story="story"></story>
-          </ul>
-          <h3>Истории Джона</h3>
-          <ul class="list-group">
-              <story v-for="(story, index) in storiesBy('John')" :key="index" :story="story"></story>
-          </ul>
-          <div class="form-group">
-              <label for="query">Что вы ищите?</label>
-              <input v-model="query" class="form-control">
-          </div>
-          <h3>Результаты поиска:</h3>
-          <ul class="list-group">
-              <story v-for="(story, index) in search" :key="index" :story="story"></story>
-          </ul>
-      </div>
+<div class="container">
+  <h1>Давайте послушаем несколько историй!</h1>
+  <div>
+    <h3>Истории Алекса</h3>
+    <ul class="list-group">
+      <story v-for="(story, index) in storiesBy('Alex')" :key="index" :story="story"></story>
+    </ul>
+    <h3>Истории Джона</h3>
+    <ul class="list-group">
+      <story v-for="(story, index) in storiesBy('John')" :key="index" :story="story"></story>
+    </ul>
+    <div class="form-group">
+      <label for="query">Что вы ищите?</label>
+      <input v-model="query" class="form-control">
+    </div>
+    <h3>Результаты поиска:</h3>
+    <ul class="list-group">
+      <story v-for="(story, index) in search" :key="index" :story="story"></story>
+    </ul>
   </div>
-  <template id="story-template">
-    <li class="list-group-item">
-      {{ story.writer }} сказал "{{ story.body }}"
-    </li>
-  </template>
+</div>
+<template id="story-template">
+  <li class="list-group-item">
+    {{ story.writer }} сказал "{{ story.body }}"
+  </li>
+</template>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 Vue.component('story', {
-    props: ['story'],
-    template: '#story-template'
+  props: ['story'],
+  template: '#story-template'
 });
 
 new Vue({
@@ -61,7 +61,7 @@ new Vue({
     ],
     query: ' '
   },
-  methods:{
+  methods: {
     storiesBy: function (writer) {
       return this.stories.filter(function (story) {
         return story.writer === writer

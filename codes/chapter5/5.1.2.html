@@ -1,34 +1,34 @@
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<title>Проголосовать</title>
-<style>
-    .container {
-        padding-top: 75px;
-    }
-</style>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Проголосовать</title>
+  <style>
+  .container {
+    padding-top: 75px;
+  }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <button class="btn btn-primary btn-lg btn-block" v-on:click="upvote">
-            Проголосовать! {{upvotes}}
-        </button>
-    </div>
+<div class="container">
+  <button class="btn btn-primary btn-lg btn-block" v-on:click="upvote">
+    Проголосовать! {{upvotes}}
+  </button>
+</div>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
 new Vue({
-    el: '.container',
-    data: {
-        upvotes: 0
-    },
-    // определить методы в объекте **`methods`**
-    methods: {
-        upvote: function () {
-            // **`this`** внутри методов указывает на Vue-экземпляр
-            this.upvotes++;
-        }
+  el: '.container',
+  data: {
+    upvotes: 0
+  },
+  // определить методы в объекте **`methods`**
+  methods: {
+    upvote: function () {
+      // **`this`** внутри методов указывает на Vue-экземпляр
+      this.upvotes++;
     }
+  }
 })
 </script>
 </html>

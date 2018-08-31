@@ -1,65 +1,65 @@
 export let pokedex = {
   categories: [
     {
-      name: 'Fire',
+      name: 'Огненный',
       pokemons: [
         {
           level: '06',
-          name: 'Charmander'
+          name: 'Чармандер'
         },
         {
           level: '12',
-          name: 'Vulpix'
+          name: 'Вульпикс'
         },
         {
           level: '10',
-          name: 'Magmar'
+          name: 'Магмар'
         },
         {
           level: '22',
-          name: 'Cyndaquil'
+          name: 'Синдаквил'
         }
       ]
     },
     {
-      name: 'Water',
+      name: 'Водный',
       pokemons: [
         {
           level: '03',
-          name: 'Squirtle'
+          name: 'Сквиртл'
         },
         {
           level: '45',
-          name: 'Blastoise'
+          name: 'Бластойз'
         },
         {
           level: '09',
-          name: 'Staryu'
+          name: 'Старью'
         },
         {
           level: '26',
-          name: 'Gyarados'
+          name: 'Гярадос'
         },
         {
           level: '29',
-          name: 'Tentacruel'
+          name: 'Тентакруэль'
         }
       ]
     },
     {
-      name: 'Electric',
+      name: 'Электрический',
       pokemons: [
         {
           level: '74',
-          name: 'Pikachu'
+          name: 'Пикачу'
         },
         {
           level: '34',
-          name: 'Electabuzz'
+          name: 'Электабазз'
         },
         {
           level: '88',
-          name: 'Zapdos'
+          name: 'Запдос'
         }
       ]
     }

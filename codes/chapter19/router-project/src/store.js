@@ -9,7 +9,7 @@ export const store = {
     },
     {
       plot: 'Нарвалы изобрели шашлык.',
-      writer: 'Mr Weebl',
+      writer: 'Мистер Уибл',
       upvotes: 8,
       voted: false,
       id: 2

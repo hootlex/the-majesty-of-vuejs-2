@@ -27,18 +27,18 @@ const routes = [
   }
 ]
 
-  const router = new VueRouter({
-    mode: 'history',
-    base: '/',
-    routes
-  })
+const router = new VueRouter({
+  mode: 'history',
+  base: '/',
+  routes
+})
 
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#app',
-    router,
-    template: '<app></app>',
-    components: {
-      App
-    }
-  })
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  template: '<app></app>',
+  components: {
+    App
+  }
+})

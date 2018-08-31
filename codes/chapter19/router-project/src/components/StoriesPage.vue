@@ -2,8 +2,8 @@
   <div>
     <h2>Истории</h2>
     <!-- навигация -->
-    <router-link :to="{name: 'stories.all'}" exact>All</router-link>
-    <router-link :to="{name: 'stories.famous'}">Trending</router-link>
+    <router-link :to="{name: 'stories.all'}" exact>Все</router-link>
+    <router-link :to="{name: 'stories.famous'}">Популярные</router-link>
     <!-- вывод маршрута -->
     <router-view></router-view>
   </div>

@@ -40,7 +40,7 @@ const routes = [
       },
       {
         path: ':id/edit',
-        props: (route) => ({ id: Number(route.params.id) }),
+        props: (route) => ({id: Number(route.params.id)}),
         name: 'stories.edit',
         component: StoriesEdit
       }
@@ -59,5 +59,5 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: {App}
 })

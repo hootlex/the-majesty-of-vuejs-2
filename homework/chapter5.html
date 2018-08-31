@@ -1,58 +1,58 @@
 <html>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <title>The Elections</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Выборы</title>
 </head>
 <body>
 <div class="container">
-    <h1>People of Vue</h1>
-    <ul class="list-group">
-        <li v-for="(candidate, index) in candidates" :key="index" class="list-group-item">
-            {{candidate.name}} {{candidate.votes}}
-            <!-- increase votes 'on:click'-->
-            <button class="btn btn-default" @click="candidate.votes++">Голосоввать</button>
-        </li>
-    </ul>
-    <!-- listening for keyboard event -->
-    <input @keyup.delete="clear" class="form-control" placeholder="press 'delete' to reset">
-    <!-- display the name of the 'mayor' using a computed property-->
-    <h2>Our mayor is {{mayor.name}}!</h2>
-    <pre>{{ $data }}</pre>
-    <pre>{{ mayor }}</pre>
+  <h1>Люди Vue</h1>
+  <ul class="list-group">
+    <li v-for="(candidate, index) in candidates" :key="index" class="list-group-item">
+      {{candidate.name}} {{candidate.votes}}
+      <!-- увеличение голосов 'on:click'-->
+      <button class="btn btn-default" @click="candidate.votes++">Голосовать</button>
+    </li>
+  </ul>
+  <!-- обработка события клавиатуры -->
+  <input @keyup.delete="clear" class="form-control" placeholder="press 'delete' to reset">
+  <!-- отобразить имя 'mayor' с использованием вычисленного свойства -->
+  <h2>Наш мэр — {{mayor.name}}!</h2>
+  <pre>{{ $data }}</pre>
+  <pre>{{ mayor }}</pre>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 <script type="text/javascript">
-    var vm = new Vue({
-        el: '.container',
-        data: {
-            candidates: [
-                {name: "Mr. Black", votes: 140},
-                {name: "Mr. White", votes: 135},
-                {name: "Mr. Pink", votes: 145},
-                {name: "Mr. Brown", votes: 130},
-            ]
-        },
-        computed: {
-            mayor: function () {
-                //first we sort the array descending
-                var candidatesSorted = this.candidates.sort(function (a, b) {
-                    return b.votes - a.votes;
-                });
-                //the mayor will be the first item
-                return candidatesSorted[0];
-            }
-        },
-        methods: {
-            //this method runs when the key 'delete' is pressed
-            clear: function () {
-                //Turn votes of all candidate to 0 using map() function.
-                this.candidates = this.candidates.map(function (candidate) {
-                    candidate.votes = 0;
-                    return candidate;
-                })
-            }
-        }
-    })
+  var vm = new Vue({
+    el: '.container',
+    data: {
+      candidates: [
+        {name: 'Мистер Черный', votes: 140},
+        {name: 'Мистер Белый', votes: 135},
+        {name: 'Мистер Розовый', votes: 145},
+        {name: 'Мистер Коричневый', votes: 130},
+      ]
+    },
+    computed: {
+      mayor: function () {
+        // сначала мы сортируем массив по убыванию
+        var candidatesSorted = this.candidates.sort(function (a, b) {
+          return b.votes - a.votes;
+        });
+        // мэр будет первым пунктом
+        return candidatesSorted[0];
+      }
+    },
+    methods: {
+      // этот метод запускается при нажатии клавиши 'delete'
+      clear: function () {
+        // Установить голоса всех кандидатов в 0 с помощью функции map().
+        this.candidates = this.candidates.map(function (candidate) {
+          candidate.votes = 0;
+          return candidate;
+        })
+      }
+    }
+  })
 </script>
 </html>

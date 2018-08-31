@@ -1,18 +1,18 @@
 <template>
   <div class="hello">
-    <h1>Category: {{category.name}}</h1>
+    <h1>Категория: {{category.name}}</h1>
     <ul class="list-group">
       <li v-for="pokemon in category.pokemons" class="list-group-item">
-        <h3>{{ pokemon.name }} <br> Level: {{pokemon.level}} </h3>
+        <h3>{{ pokemon.name }} <br> Уровень: {{pokemon.level}} </h3>
       </li>
     </ul>
 
-    <button @click="goBack" class="btn btn-lg btn-primary">Back to Categories</button>
-    <router-link :to="{ path: this.$route.params.name + '/pokemons/new', params: { name: this.$route.params.name }}" tag="button" class="btn btn-lg btn-success">Add new pokemon</router-link>
+    <button @click="goBack" class="btn btn-lg btn-primary">Вернуться обратно к категориям</button>
+    <router-link :to="{ path: this.$route.params.name + '/pokemons/new', params: { name: this.$route.params.name }}" tag="button" class="btn btn-lg btn-success">Добавить нового покемона</router-link>
     <!-- <button
       v-link="{ path: '/category/' + this.$route.params.name + '/pokemons/new' }"
       class="btn btn-lg btn-success">
-      Add new pokemon
+      Добавить нового покемона
     </button> -->
   <router-view></router-view>
 </div>
