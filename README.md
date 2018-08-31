@@ -1,7 +1,7 @@
-# The Majesty of Vuejs 2
+# Величие Vue.js 2
 
-[![Book Cover](https://s3.amazonaws.com/titlepages.leanpub.com/vuejs2/large?1476162030)](https://leanpub.com/vuejs2)
+[![Book Cover](https://s3.amazonaws.com/titlepages.leanpub.com/vuejs2-russian/hero?1535732266)](https://leanpub.com/vuejs2-russian)
 
-This repo is for educational use.
+Этот репозиторий для использования в учебных целях.
 
-It contains demo apis, homework solutions and the code examples of the book, [The Majesty of Vue.js 2](https://leanpub.com/vuejs2).
+Он содержит демонстрацию API-интерфейсов, домашние задания и примеры кода книги [Величие Vue.js 2](https://leanpub.com/vuejs2-russian).
