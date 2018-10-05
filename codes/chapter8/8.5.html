@@ -8,7 +8,7 @@
   <div class="container">
     <h1>Давайте послушаем несколько историй!</h1>
     <ul class="list-group">
-      <story v-for="(story, index) in stories" :key="index" :favorite="favorite" @update="updateFavorite">
+      <story v-for="(story, index) in stories" :key="index" :story="story" :favorite="favorite" @update="updateFavorite">
       </story>
     </ul>
     <pre>
