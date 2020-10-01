@@ -1,4 +1,4 @@
-# The Majesty of Vuejs 2
+# The Majesty of Vuejs 
 
 [![Book Cover](https://s3.amazonaws.com/titlepages.leanpub.com/vuejs2/large?1476162030)](https://leanpub.com/vuejs2)
 
